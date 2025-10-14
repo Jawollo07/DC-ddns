@@ -1,3 +1,6 @@
 discord.py
-python-dotenv
 requests
+python-dotenv
+mysql-connector-python
+flask
+asyncio>

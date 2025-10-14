@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DNS Control Panel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #f5f5f5; }
+        .container { max-width: 1400px; margin: 0 auto; }
+        .header { background: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .card { background: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background: #f8f9fa; }
+        .btn { padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; margin: 5px; }
+        .btn-primary { background: #007bff; color: white; }
+        .btn-success { background: #28a745; color: white; }
+        .btn-danger { background: #dc3545; color: white; }
+        .btn-info { background: #17a2b8; color: white; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input[type="text"], select { width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; }
+        .status-good { color: #28a745; }
+        .status-warning { color: #ffc107; }
+        .status-bad { color: #dc3545; }
+        .logout-btn { float: right; background: #6c757d; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; }
+        .tab-container { margin-top: 20px; }
+        .tab-buttons { display: flex; border-bottom: 1px solid #ddd; }
+        .tab-button { padding: 10px 20px; background: none; border: none; cursor: pointer; border-bottom: 2px solid transparent; }
+        .tab-button.active { border-bottom: 2px solid #007bff; color: #007bff; }
+        .tab-content { display: none; padding: 20px 0; }
+        .tab-content.active { display: block; }
+        .log-entry { padding: 8px; border-left: 3px solid #ddd; margin-bottom: 5px; }
+        .log-entry.info { border-left-color: #17a2b8; background: #e8f4f8; }
+        .log-entry.warning { border-left-color: #ffc107; background: #fff8e1; }
+        .log-entry.error { border-left-color: #dc3545; background: #fde8e8; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>DNS Control Panel <button class="logout-btn" onclick="logout()">Logout</button></h1>
+            <div id="lastUpdate">Letztes Update: Lade...</div>
+        </div>
+
+        <div class="tab-container">
+            <div class="tab-buttons">
+                <button class="tab-button active" onclick="showTab('dashboard')">Dashboard</button>
+                <button class="tab-button" onclick="showTab('history')">History</button>
+                <button class="tab-button" onclick="showTab('logs')">System Logs</button>
+            </div>
+
+            <!-- Dashboard Tab -->
+            <div id="dashboard" class="tab-content active">
+                <div class="grid-2">
+                    <div class="card">
+                        <h2>IP Informationen</h2>
+                        <div id="ipInfo">
+                            <p><strong>IPv4:</strong> <span id="ipv4">Lade...</span></p>
+                            <p><strong>IPv6:</strong> <span id="ipv6">Lade...</span></p>
+                            <p><strong>Client IP:</strong> <span id="clientIp">Lade...</span></p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h2>DNS Update</h2>
+                        <form id="updateForm">
+                            <div class="form-group">
+                                <label>Record Name (optional):</label>
+                                <input type="text" id="recordName" placeholder="subdomain.example.com">
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    <input type="checkbox" id="useAutoIp" checked> Automatische IP ermitteln
+                                </label>
+                            </div>
+                            <div id="manualIpFields" style="display: none;">
+                                <div class="form-group">
+                                    <label>IPv4 (manuell):</label>
+                                    <input type="text" id="manualIpv4" placeholder="1.2.3.4">
+                                </div>
+                                <div class="form-group">
+                                    <label>IPv6 (manuell):</label>
+                                    <input type="text" id="manualIpv6" placeholder="2001:db8::1">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">DNS Update ausführen</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>DNS Records</h2>
+                    <div id="recordsTable">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Type</th>
+                                    <th>Current IP</th>
+                                    <th>Public IP</th>
+                                    <th>Status</th>
+                                    <th>Proxied</th>
+                                </tr>
+                            </thead>
+                            <tbody id="recordsBody">
+                                <!-- Records werden hier eingefügt -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>Zertifikat Management</h2>
+                    <button class="btn btn-success" onclick="renewCertificates()">Zertifikate erneuern</button>
+                    <div id="certResult"></div>
+                </div>
+            </div>
+
+            <!-- History Tab -->
+            <div id="history" class="tab-content">
+                <div class="card">
+                    <h2>IP-Änderungshistorie</h2>
+                    <button class="btn btn-info" onclick="loadHistory()">Aktualisieren</button>
+                    <div id="historyContent" style="margin-top: 15px;">
+                        <!-- History wird hier eingefügt -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Logs Tab -->
+            <div id="logs" class="tab-content">
+                <div class="card">
+                    <h2>System Logs</h2>
+                    <button class="btn btn-info" onclick="loadLogs()">Aktualisieren</button>
+                    <div id="logsContent" style="margin-top: 15px; max-height: 600px; overflow-y: auto;">
+                        <!-- Logs werden hier eingefügt -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentData = null;
+
+        // Tab Navigation
+        function showTab(tabName) {
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        // Auto IP Checkbox Handler
+        document.getElementById('useAutoIp').addEventListener('change', function() {
+            document.getElementById('manualIpFields').style.display = this.checked ? 'none' : 'block';
+        });
+
+        // Logout Funktion
+        async function logout() {
+            await fetch('/logout');
+            window.location.reload();
+        }
+
+        // Status aktualisieren
+        async function updateStatus() {
+            try {
+                const response = await fetch('/api/status');
+                if (response.status === 401) {
+                    window.location.reload();
+                    return;
+                }
+                const data = await response.json();
+                currentData = data;
+
+                // IP Informationen aktualisieren
+                document.getElementById('ipv4').textContent = data.ips.ipv4 || 'N/A';
+                document.getElementById('ipv6').textContent = data.ips.ipv6 || 'N/A';
+                document.getElementById('clientIp').textContent = data.ips.client_ip || 'N/A';
+
+                // Records Tabelle aktualisieren
+                const recordsBody = document.getElementById('recordsBody');
+                recordsBody.innerHTML = '';
+
+                data.records.forEach(record => {
+                    const publicIp = record.type === 'AAAA' ? data.ips.ipv6 : data.ips.ipv4;
+                    const status = publicIp && record.content === publicIp ? 'status-good' : 'status-warning';
+                    const statusText = publicIp && record.content === publicIp ? '✓ Synchron' : '⚠️ Differenz';
+
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${record.name}</td>
+                        <td>${record.type}</td>
+                        <td>${record.content}</td>
+                        <td>${publicIp || 'N/A'}</td>
+                        <td class="${status}">${statusText}</td>
+                        <td>${record.proxied ? 'Ja' : 'Nein'}</td>
+                    `;
+                    recordsBody.appendChild(row);
+                });
+
+                // Letztes Update anzeigen
+                if (data.bot_status.last_update) {
+                    const date = new Date(data.bot_status.last_update);
+                    document.getElementById('lastUpdate').textContent = 
+                        `Letztes Update: ${date.toLocaleString()} | Gesamtaktualisierungen: ${data.bot_status.total_updates}`;
+                }
+
+            } catch (error) {
+                console.error('Fehler beim Aktualisieren des Status:', error);
+            }
+        }
+
+        // DNS Update Formular
+        document.getElementById('updateForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formData = {
+                record_name: document.getElementById('recordName').value || null,
+                use_auto_ip: document.getElementById('useAutoIp').checked,
+                ipv4: document.getElementById('manualIpv4').value || null,
+                ipv6: document.getElementById('manualIpv6').value || null
+            };
+
+            try {
+                const response = await fetch('/api/update', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const data = await response.json();
+                
+                if (data.success) {
+                    alert(`Update erfolgreich! ${data.updated_count} Records aktualisiert.`);
+                    updateStatus();
+                } else {
+                    alert('Fehler beim Update: ' + data.error);
+                }
+            } catch (error) {
+                alert('Netzwerkfehler beim Update');
+            }
+        });
+
+        // Zertifikate erneuern
+        async function renewCertificates() {
+            try {
+                const response = await fetch('/api/renew-cert', {
+                    method: 'POST'
+                });
+
+                const data = await response.json();
+                document.getElementById('certResult').innerHTML = 
+                    `<pre>${data.result || data.error}</pre>`;
+            } catch (error) {
+                document.getElementById('certResult').innerHTML = 
+                    `<pre>Fehler: ${error.message}</pre>`;
+            }
+        }
+
+        // History laden
+        async function loadHistory() {
+            try {
+                const response = await fetch('/api/history?limit=50');
+                const history = await response.json();
+                
+                const historyContent = document.getElementById('historyContent');
+                if (history.error) {
+                    historyContent.innerHTML = `<p>Fehler: ${history.error}</p>`;
+                    return;
+                }
+
+                if (history.length === 0) {
+                    historyContent.innerHTML = '<p>Keine Historie verfügbar.</p>';
+                    return;
+                }
+
+                let html = '<table><thead><tr><th>Zeit</th><th>Record</th><th>Änderung</th><th>Typ</th><th>Benutzer</th></tr></thead><tbody>';
+                history.forEach(entry => {
+                    html += `
+                        <tr>
+                            <td>${new Date(entry.created_at).toLocaleString()}</td>
+                            <td>${entry.record_name || entry.record_id}</td>
+                            <td>${entry.old_ip} → ${entry.new_ip}</td>
+                            <td>${entry.change_type}</td>
+                            <td>${entry.changed_by}</td>
+                        </tr>
+                    `;
+                });
+                html += '</tbody></table>';
+                historyContent.innerHTML = html;
+            } catch (error) {
+                console.error('Fehler beim Laden der History:', error);
+                document.getElementById('historyContent').innerHTML = '<p>Fehler beim Laden der History.</p>';
+            }
+        }
+
+        // Logs laden
+        async function loadLogs() {
+            try {
+                const response = await fetch('/api/logs?limit=100');
+                const logs = await response.json();
+                
+                const logsContent = document.getElementById('logsContent');
+                if (logs.error) {
+                    logsContent.innerHTML = `<p>Fehler: ${logs.error}</p>`;
+                    return;
+                }
+
+                if (logs.length === 0) {
+                    logsContent.innerHTML = '<p>Keine Logs verfügbar.</p>';
+                    return;
+                }
+
+                let html = '';
+                logs.forEach(log => {
+                    html += `
+                        <div class="log-entry ${log.level.toLowerCase()}">
+                            <strong>[${new Date(log.created_at).toLocaleString()}] ${log.level}</strong><br>
+                            ${log.message} (${log.source}${log.user_id ? ' - ' + log.user_id : ''})
+                        </div>
+                    `;
+                });
+                logsContent.innerHTML = html;
+            } catch (error) {
+                console.error('Fehler beim Laden der Logs:', error);
+                document.getElementById('logsContent').innerHTML = '<p>Fehler beim Laden der Logs.</p>';
+            }
+        }
+
+        // Automatische Aktualisierung alle 30 Sekunden
+        updateStatus();
+        setInterval(updateStatus, 30000);
+
+        // Lade History und Logs wenn Tab aktiviert
+        document.querySelectorAll('.tab-button').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (this.textContent === 'History') {
+                    loadHistory();
+                } else if (this.textContent === 'System Logs') {
+                    loadLogs();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

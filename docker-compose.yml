@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  ddns-bot:
+    build: .
+    container_name: ddns-bot
+    restart: unless-stopped
+    environment:
+      - DISCORD_BOT_TOKEN=${DISCORD_BOT_TOKEN}
+      - CF_API_TOKEN=${CF_API_TOKEN}
+      - CF_ZONE_ID=${CF_ZONE_ID}
+      - MYSQL_HOST=mysql
+      - MYSQL_PORT=3306
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - WEB_USERNAME=${WEB_USERNAME}
+      - WEB_PASSWORD=${WEB_PASSWORD}
+      - WEB_PORT=5000
+      - WEB_HOST=0.0.0.0
+      - FLASK_SECRET_KEY=${FLASK_SECRET_KEY}
+      - CERTBOT_EMAIL=${CERTBOT_EMAIL}
+      - CERTBOT_DOMAINS=${CERTBOT_DOMAINS}
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mysql
+    volumes:
+      - ./logs:/app/logs
+    networks:
+      - ddns-network
+
+  mysql:
+    image: mysql:8.0
+    container_name: ddns-mysql
+    restart: unless-stopped
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - ddns-network
+
+volumes:
+  mysql_data:
+
+networks:
+  ddns-network:
+    driver: bridge
