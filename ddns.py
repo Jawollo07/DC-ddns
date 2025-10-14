@@ -8,6 +8,9 @@ import logging
 from datetime import datetime
 from dotenv import load_dotenv
 from typing import List, Optional, Dict, Any
+from flask import Flask, render_template, request, jsonify, session
+import threading
+import asyncio
 
 # 🌐 .env laden
 load_dotenv()
@@ -18,6 +21,10 @@ ZONE_ID = os.getenv("CF_ZONE_ID")
 DISCORD_BOT_TOKEN = os.getenv("DISCORD_BOT_TOKEN")
 AUTO_UPDATE_INTERVAL_MIN = int(os.getenv("AUTO_UPDATE_INTERVAL", "10"))
 ALLOWED_USER_IDS = [int(uid.strip()) for uid in os.getenv("ALLOWED_USER_IDS", "").split(",") if uid.strip()]
+WEB_USERNAME = os.getenv("WEB_USERNAME", "admin")
+WEB_PASSWORD = os.getenv("WEB_PASSWORD", "password")
+WEB_PORT = int(os.getenv("WEB_PORT", "5000"))
+WEB_HOST = os.getenv("WEB_HOST", "0.0.0.0")
 
 # 🌩️ Nur diese Typen werden berücksichtigt
 RECORD_TYPES = ["A", "AAAA"]
@@ -36,6 +43,10 @@ logging.basicConfig(
     ]
 )
 logger = logging.getLogger(__name__)
+
+# Flask App für Web-Control-Panel
+web_app = Flask(__name__)
+web_app.secret_key = os.getenv("FLASK_SECRET_KEY", "your-secret-key-here")
 
 class CloudflareAPI:
     """Klasse zur Handhabung der Cloudflare API Interaktionen"""
@@ -99,6 +110,22 @@ class CloudflareAPI:
             logger.error(f"Fehler beim Aktualisieren des DNS-Records: {e}")
             return False
 
+    def get_dns_record_by_name(self, name: str) -> Optional[Dict[str, Any]]:
+        """Holt einen spezifischen DNS-Record nach Namen"""
+        try:
+            url = f"{self.base_url}?name={name}"
+            response = requests.get(url, headers=self.headers, timeout=10)
+            response.raise_for_status()
+            
+            data = response.json()
+            if data.get("success") and data["result"]:
+                return data["result"][0]
+            return None
+                
+        except requests.exceptions.RequestException as e:
+            logger.error(f"Fehler beim Abrufen des DNS-Records {name}: {e}")
+            return None
+
 class IPManager:
     """Klasse zur Handhabung von IP-Adressen"""
     
@@ -115,6 +142,16 @@ class IPManager:
         except Exception as e:
             logger.error(f"Fehler beim Ermitteln der IP: {e}")
             return None
+
+    @staticmethod
+    def get_client_ip(request) -> str:
+        """Ermittelt die IP-Adresse des Clients"""
+        if request.headers.get('X-Forwarded-For'):
+            return request.headers['X-Forwarded-For'].split(',')[0]
+        elif request.headers.get('X-Real-IP'):
+            return request.headers['X-Real-IP']
+        else:
+            return request.remote_addr
 
 class CertbotManager:
     """Klasse zur Handhabung von Certbot-Zertifikaten"""
@@ -173,6 +210,7 @@ class DNSBot(commands.Bot):
         # Status-Variablen
         self.last_update = None
         self.update_count = 0
+        self.web_interface = None
     
     async def setup_hook(self):
         """Wird beim Start des Bots aufgerufen"""
@@ -183,13 +221,180 @@ class DNSBot(commands.Bot):
         """Prüft ob Benutzer berechtigt ist"""
         return user_id in ALLOWED_USER_IDS
 
+    def start_web_interface(self):
+        """Startet das Web-Interface in einem separaten Thread"""
+        self.web_interface = WebInterface(self, self.cf_api, self.ip_manager)
+        self.web_interface.start()
+
 # Bot initialisieren
 bot = DNSBot()
+
+class WebInterface:
+    """Web-Control-Panel für DNS-Management"""
+    
+    def __init__(self, bot: DNSBot, cf_api: CloudflareAPI, ip_manager: IPManager):
+        self.bot = bot
+        self.cf_api = cf_api
+        self.ip_manager = ip_manager
+        self.app = web_app
+        self.setup_routes()
+    
+    def setup_routes(self):
+        """Definiert die Web-Routen"""
+        
+        @self.app.route('/')
+        def index():
+            if not session.get('logged_in'):
+                return render_template('login.html')
+            return render_template('index.html')
+        
+        @self.app.route('/login', methods=['POST'])
+        def login():
+            username = request.form.get('username')
+            password = request.form.get('password')
+            
+            if username == WEB_USERNAME and password == WEB_PASSWORD:
+                session['logged_in'] = True
+                return jsonify({'success': True})
+            return jsonify({'success': False, 'error': 'Ungültige Anmeldedaten'})
+        
+        @self.app.route('/logout')
+        def logout():
+            session.pop('logged_in', None)
+            return jsonify({'success': True})
+        
+        @self.app.route('/api/status')
+        def api_status():
+            if not session.get('logged_in'):
+                return jsonify({'error': 'Nicht autorisiert'}), 401
+            
+            try:
+                records = self.cf_api.get_all_dns_records()
+                ipv4 = self.ip_manager.get_public_ip(False)
+                ipv6 = self.ip_manager.get_public_ip(True)
+                client_ip = self.ip_manager.get_client_ip(request)
+                
+                status_data = {
+                    'records': records,
+                    'ips': {
+                        'ipv4': ipv4,
+                        'ipv6': ipv6,
+                        'client_ip': client_ip
+                    },
+                    'bot_status': {
+                        'last_update': self.bot.last_update.isoformat() if self.bot.last_update else None,
+                        'update_count': self.bot.update_count
+                    }
+                }
+                return jsonify(status_data)
+            except Exception as e:
+                logger.error(f"Fehler in API Status: {e}")
+                return jsonify({'error': str(e)}), 500
+        
+        @self.app.route('/api/update', methods=['POST'])
+        def api_update():
+            if not session.get('logged_in'):
+                return jsonify({'error': 'Nicht autorisiert'}), 401
+            
+            try:
+                data = request.get_json()
+                record_name = data.get('record_name')
+                ipv4 = data.get('ipv4')
+                ipv6 = data.get('ipv6')
+                use_auto_ip = data.get('use_auto_ip', True)
+                
+                # Wenn use_auto_ip True ist, verwende automatische IPs
+                if use_auto_ip:
+                    auto_ipv4 = self.ip_manager.get_public_ip(False)
+                    auto_ipv6 = self.ip_manager.get_public_ip(True)
+                    ipv4 = ipv4 or auto_ipv4
+                    ipv6 = ipv6 or auto_ipv6
+                
+                records = self.cf_api.get_all_dns_records()
+                results = []
+                updated_count = 0
+                
+                for record in records:
+                    # Filtere nach Record-Name falls angegeben
+                    if record_name and record['name'] != record_name:
+                        continue
+                    
+                    if record["type"] == "A" and ipv4 and record["content"] != ipv4:
+                        record_data = {
+                            "type": record["type"],
+                            "name": record["name"],
+                            "content": ipv4,
+                            "ttl": 120,
+                            "proxied": record.get("proxied", False)
+                        }
+                        
+                        if self.cf_api.update_dns_record(record["id"], record_data):
+                            results.append(f"✅ {record['type']} {record['name']}: {ipv4}")
+                            updated_count += 1
+                        else:
+                            results.append(f"❌ Fehler bei {record['type']} {record['name']}")
+                    
+                    elif record["type"] == "AAAA" and ipv6 and record["content"] != ipv6:
+                        record_data = {
+                            "type": record["type"],
+                            "name": record["name"],
+                            "content": ipv6,
+                            "ttl": 120,
+                            "proxied": record.get("proxied", False)
+                        }
+                        
+                        if self.cf_api.update_dns_record(record["id"], record_data):
+                            results.append(f"✅ {record['type']} {record['name']}: {ipv6}")
+                            updated_count += 1
+                        else:
+                            results.append(f"❌ Fehler bei {record['type']} {record['name']}")
+                
+                self.bot.last_update = datetime.now()
+                self.bot.update_count += updated_count
+                
+                return jsonify({
+                    'success': True,
+                    'updated_count': updated_count,
+                    'results': results,
+                    'timestamp': datetime.now().isoformat()
+                })
+                
+            except Exception as e:
+                logger.error(f"Fehler in API Update: {e}")
+                return jsonify({'error': str(e)}), 500
+        
+        @self.app.route('/api/renew-cert', methods=['POST'])
+        def api_renew_cert():
+            if not session.get('logged_in'):
+                return jsonify({'error': 'Nicht autorisiert'}), 401
+            
+            try:
+                result = self.bot.certbot_manager.renew_certificates()
+                return jsonify({'success': True, 'result': result})
+            except Exception as e:
+                logger.error(f"Fehler in API Renew Cert: {e}")
+                return jsonify({'error': str(e)}), 500
+    
+    def start(self):
+        """Startet den Web-Server in einem separaten Thread"""
+        def run_flask():
+            self.app.run(
+                host=WEB_HOST,
+                port=WEB_PORT,
+                debug=False,
+                use_reloader=False
+            )
+        
+        flask_thread = threading.Thread(target=run_flask, daemon=True)
+        flask_thread.start()
+        logger.info(f"🌐 Web-Control-Panel gestartet auf http://{WEB_HOST}:{WEB_PORT}")
 
 @bot.event
 async def on_ready():
     """Wird aufgerufen wenn der Bot bereit ist"""
     logger.info(f"✅ Bot bereit als {bot.user}")
+    logger.info(f"🔧 Starte Web-Control-Panel...")
+    bot.start_web_interface()
     auto_update_loop.start()
 
 # 🔁 Auto-Update Loop
@@ -225,6 +430,9 @@ async def auto_update_loop():
         
     except Exception as e:
         logger.error(f"Fehler in auto_update_loop: {e}")
+
+# Die restlichen Discord-Befehle bleiben unverändert...
+# (update, status, renewcert, info commands bleiben gleich wie im ursprünglichen Code)
 
 @bot.tree.command(name="update", description="DNS-Einträge manuell aktualisieren")
 @app_commands.describe(ipv4="IPv4 manuell setzen", ipv6="IPv6 manuell setzen")
@@ -365,12 +573,13 @@ async def info(interaction: discord.Interaction):
         timestamp=datetime.now()
     )
     
-    embed.add_field(name="Version", value="1.0", inline=True)
+    embed.add_field(name="Version", value="2.0", inline=True)
     embed.add_field(name="Developer", value="Jawollo07", inline=True)
     embed.add_field(name="Source", value="[GitHub](https://github.com/Jawollo07/DC-ddns.git)", inline=True)
     embed.add_field(name="Befehle", value="/update, /status, /renewcert, /info", inline=False)
     embed.add_field(name="Auto-Update", value=f"Alle {AUTO_UPDATE_INTERVAL_MIN} Minuten", inline=True)
     embed.add_field(name="Überwachte Records", value=f"{', '.join(RECORD_TYPES)}", inline=True)
+    embed.add_field(name="Web-Control-Panel", value=f"http://{WEB_HOST}:{WEB_PORT}", inline=True)
     
     await interaction.response.send_message(embed=embed)
 
@@ -403,5 +612,5 @@ if __name__ == "__main__":
         logger.error("Fehlende Umgebungsvariablen! Bitte .env Datei überprüfen.")
         exit(1)
     
-    logger.info("Starting DNS Bot...")
+    logger.info("Starting DNS Bot with Web Control Panel...")
     bot.run(DISCORD_BOT_TOKEN)
