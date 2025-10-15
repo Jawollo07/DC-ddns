@@ -66,3 +66,194 @@
 2025-10-15 09:52:52,248 - INFO - Öffentliche IPv4 ermittelt: 84.169.182.42
 2025-10-15 09:52:52,823 - INFO - Öffentliche IPv6 ermittelt: 2003:d9:f704:f019:be24:11ff:feee:fa59
 2025-10-15 09:52:52,827 - INFO - 192.168.178.169 - - [15/Oct/2025 09:52:52] "GET /api/status HTTP/1.1" 200 -
+2025-10-15 09:54:08,665 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-10-15 09:54:08,669 - INFO - ✅ Verbindung zur MySQL-Datenbank hergestellt
+2025-10-15 09:54:08,671 - INFO - ✅ Datenbank-Tabellen initialisiert
+2025-10-15 09:54:08,672 - INFO - Starting DNS Bot with MySQL Database and Web Control Panel...
+2025-10-15 09:54:08,673 - WARNING - Privileged message content intent is missing, commands may not work as expected.
+2025-10-15 09:54:08,673 - INFO - logging in using static token
+2025-10-15 09:54:09,489 - INFO - Slash-Befehle synchronisiert
+2025-10-15 09:54:10,175 - INFO - Shard ID None has connected to Gateway (Session ID: 8f96716f4223573a55395439aef5b8d8).
+2025-10-15 09:54:12,220 - INFO - ✅ Bot bereit als DDNS#4771
+2025-10-15 09:54:12,220 - INFO - 🔧 Starte Web-Control-Panel...
+2025-10-15 09:54:12,227 - INFO - 🌐 Web-Control-Panel gestartet auf http://0.0.0.0:5000
+2025-10-15 09:54:12,229 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.178.174:5000
+2025-10-15 09:54:12,230 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-15 09:54:12,231 - INFO - 🔁 Auto-Update gestartet (Intervall: 30min)
+2025-10-15 09:54:13,615 - INFO - Öffentliche IPv4 ermittelt: 84.169.182.42
+2025-10-15 09:54:14,178 - INFO - Öffentliche IPv6 ermittelt: 2003:d9:f704:f019:be24:11ff:feee:fa59
+2025-10-15 09:54:15,068 - ERROR - Auto-Update Fehler: 'id'
+2025-10-15 09:54:15,081 - INFO - Alte Web-Sessions bereinigt
+2025-10-15 09:54:25,151 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-10-15 09:54:25,154 - INFO - ✅ Verbindung zur MySQL-Datenbank hergestellt
+2025-10-15 09:54:25,156 - INFO - ✅ Datenbank-Tabellen initialisiert
+2025-10-15 09:54:25,157 - INFO - Starting DNS Bot with MySQL Database and Web Control Panel...
+2025-10-15 09:54:25,158 - WARNING - Privileged message content intent is missing, commands may not work as expected.
+2025-10-15 09:54:25,159 - INFO - logging in using static token
+2025-10-15 09:55:09,436 - INFO - Slash-Befehle synchronisiert
+2025-10-15 09:55:10,053 - INFO - Shard ID None has connected to Gateway (Session ID: fa8aea8d5af4a23aacb8a9ea498c106c).
+2025-10-15 09:55:12,070 - INFO - ✅ Bot bereit als DDNS#4771
+2025-10-15 09:55:12,070 - INFO - 🔧 Starte Web-Control-Panel...
+2025-10-15 09:55:12,077 - INFO - 🌐 Web-Control-Panel gestartet auf http://0.0.0.0:5000
+2025-10-15 09:55:12,080 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.178.174:5000
+2025-10-15 09:55:12,081 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-15 09:55:12,085 - INFO - 🔁 Auto-Update gestartet (Intervall: 30min)
+2025-10-15 09:55:13,128 - INFO - Öffentliche IPv4 ermittelt: 84.169.182.42
+2025-10-15 09:55:13,702 - INFO - Öffentliche IPv6 ermittelt: 2003:d9:f704:f019:be24:11ff:feee:fa59
+2025-10-15 09:55:14,629 - ERROR - Auto-Update Fehler: 'id'
+2025-10-15 09:55:14,634 - INFO - Alte Web-Sessions bereinigt
+2025-10-15 09:56:20,334 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-10-15 09:56:20,338 - INFO - ✅ Verbindung zur MySQL-Datenbank hergestellt
+2025-10-15 09:56:20,340 - INFO - ✅ Datenbank-Tabellen initialisiert
+2025-10-15 09:56:20,341 - INFO - Starting DNS Bot with MySQL Database and Web Control Panel...
+2025-10-15 09:56:20,342 - WARNING - Privileged message content intent is missing, commands may not work as expected.
+2025-10-15 09:56:20,343 - INFO - logging in using static token
+2025-10-15 09:56:21,252 - INFO - Slash-Befehle synchronisiert
+2025-10-15 09:56:21,708 - INFO - Shard ID None has connected to Gateway (Session ID: 024055e82638887b94cd1b0ddf369f1b).
+2025-10-15 09:56:23,716 - INFO - ✅ Bot bereit als DDNS#4771
+2025-10-15 09:56:23,717 - INFO - 🔧 Starte Web-Control-Panel...
+2025-10-15 09:56:23,723 - INFO - 🌐 Web-Control-Panel gestartet auf http://0.0.0.0:5000
+2025-10-15 09:56:23,727 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.178.174:5000
+2025-10-15 09:56:23,728 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-15 09:56:23,731 - INFO - 🔁 Auto-Update gestartet (Intervall: 30min)
+2025-10-15 09:56:24,882 - INFO - Öffentliche IPv4 ermittelt: 84.169.182.42
+2025-10-15 09:56:25,455 - INFO - Öffentliche IPv6 ermittelt: 2003:d9:f704:f019:be24:11ff:feee:fa59
+2025-10-15 09:56:26,138 - ERROR - Auto-Update Fehler: 'id'
+2025-10-15 09:56:26,146 - INFO - Alte Web-Sessions bereinigt
+2025-10-15 09:58:13,990 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-10-15 09:58:13,993 - INFO - ✅ Verbindung zur MySQL-Datenbank hergestellt
+2025-10-15 09:58:13,995 - INFO - ✅ Datenbank-Tabellen initialisiert
+2025-10-15 09:58:13,996 - INFO - Starting DNS Bot with MySQL Database and Web Control Panel...
+2025-10-15 09:58:13,997 - WARNING - Privileged message content intent is missing, commands may not work as expected.
+2025-10-15 09:58:13,998 - INFO - logging in using static token
+2025-10-15 09:58:14,782 - INFO - Slash-Befehle synchronisiert
+2025-10-15 09:58:15,407 - INFO - Shard ID None has connected to Gateway (Session ID: f0a96c16387f787703e3d3b780962117).
+2025-10-15 09:58:17,417 - INFO - ✅ Bot bereit als DDNS#4771
+2025-10-15 09:58:17,417 - INFO - 🔧 Starte Web-Control-Panel...
+2025-10-15 09:58:17,424 - INFO - 🌐 Web-Control-Panel gestartet auf http://0.0.0.0:5000
+2025-10-15 09:58:17,427 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.178.174:5000
+2025-10-15 09:58:17,428 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-15 09:58:17,431 - INFO - 🔁 Auto-Update gestartet (Intervall: 30min)
+2025-10-15 09:58:18,435 - INFO - Öffentliche IPv4 ermittelt: 84.169.182.42
+2025-10-15 09:58:19,021 - INFO - Öffentliche IPv6 ermittelt: 2003:d9:f704:f019:be24:11ff:feee:fa59
+2025-10-15 09:58:19,023 - INFO - 📋 30 Records gefunden | IPv4: 84.169.182.42 | IPv6: 2003:d9:f704:f019:be24:11ff:feee:fa59
+2025-10-15 09:58:19,024 - INFO - Record 1: name='admin.mcjj.de' type='A' id='d4d798fb76690086b0db3099b6485cfc' content='84.169.182.42'
+2025-10-15 09:58:19,024 - INFO - Record 2: name='apk.mcjj.de' type='A' id='1d15a673fa8900e2ee858a6d92554745' content='84.169.182.42'
+2025-10-15 09:58:19,024 - INFO - Record 3: name='ban.mcjj.de' type='A' id='d77e07676a63525792feff5a235b8424' content='84.169.182.42'
+2025-10-15 09:58:19,024 - INFO - Record 4: name='book.mcjj.de' type='A' id='4fa2c13ec9a631e3e7cc471cbb879573' content='84.169.182.42'
+2025-10-15 09:58:19,024 - INFO - Record 5: name='cloud.mcjj.de' type='A' id='0aa6f71f79c5a099ea5cf68d7887e8ed' content='84.169.182.42'
+2025-10-15 09:58:19,024 - INFO - Record 6: name='db.mcjj.de' type='A' id='169bdef56cf1bc67dcef0c8980618270' content='84.169.182.42'
+2025-10-15 09:58:19,024 - INFO - Record 7: name='dc-lib.mcjj.de' type='A' id='e4c909a1d34567371b1a78b056a40463' content='87.168.192.145'
+2025-10-15 09:58:19,024 - INFO - 🔄 Update dc-lib.mcjj.de (ID: e4c909a1d34567371b1a78b056a40463) → 84.169.182.42
+2025-10-15 09:58:19,756 - ERROR - Auto-Update FEHLER: 'id'
+2025-10-15 09:58:19,762 - INFO - Alte Web-Sessions bereinigt
+2025-10-15 10:07:35,831 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-10-15 10:07:35,835 - INFO - ✅ Verbindung zur MySQL-Datenbank hergestellt
+2025-10-15 10:07:35,836 - INFO - ✅ Datenbank-Tabellen initialisiert
+2025-10-15 10:07:35,837 - INFO - Starting DNS Bot with MySQL Database and Web Control Panel...
+2025-10-15 10:07:35,838 - WARNING - Privileged message content intent is missing, commands may not work as expected.
+2025-10-15 10:07:35,839 - INFO - logging in using static token
+2025-10-15 10:07:36,739 - INFO - Slash-Befehle synchronisiert
+2025-10-15 10:07:37,218 - INFO - Shard ID None has connected to Gateway (Session ID: b1817b90d9ca3f886af391752051c7be).
+2025-10-15 10:07:39,250 - INFO - ✅ Bot bereit als DDNS#4771
+2025-10-15 10:07:39,250 - INFO - 🔧 Starte Web-Control-Panel...
+2025-10-15 10:07:39,258 - INFO - 🌐 Web-Control-Panel gestartet auf http://0.0.0.0:5000
+2025-10-15 10:07:39,261 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.178.174:5000
+2025-10-15 10:07:39,262 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-15 10:07:39,264 - INFO - 🔁 Auto-Update gestartet (Intervall: 30min)
+2025-10-15 10:07:40,450 - INFO - Öffentliche IPv4 ermittelt: 84.169.182.42
+2025-10-15 10:07:40,983 - INFO - Öffentliche IPv6 ermittelt: 2003:d9:f704:f019:be24:11ff:feee:fa59
+2025-10-15 10:07:40,985 - INFO - 📋 30 Records gefunden | IPv4: 84.169.182.42 | IPv6: 2003:d9:f704:f019:be24:11ff:feee:fa59
+2025-10-15 10:07:40,987 - INFO - Record 1: name='admin.mcjj.de' type='A' id='d4d798fb76690086b0db3099b6485cfc' content='84.169.182.42'
+2025-10-15 10:07:40,987 - INFO - Record 2: name='apk.mcjj.de' type='A' id='1d15a673fa8900e2ee858a6d92554745' content='84.169.182.42'
+2025-10-15 10:07:40,987 - INFO - Record 3: name='ban.mcjj.de' type='A' id='d77e07676a63525792feff5a235b8424' content='84.169.182.42'
+2025-10-15 10:07:40,988 - INFO - Record 4: name='book.mcjj.de' type='A' id='4fa2c13ec9a631e3e7cc471cbb879573' content='84.169.182.42'
+2025-10-15 10:07:40,988 - INFO - Record 5: name='cloud.mcjj.de' type='A' id='0aa6f71f79c5a099ea5cf68d7887e8ed' content='84.169.182.42'
+2025-10-15 10:07:40,988 - INFO - Record 6: name='db.mcjj.de' type='A' id='169bdef56cf1bc67dcef0c8980618270' content='84.169.182.42'
+2025-10-15 10:07:40,989 - INFO - Record 7: name='dc-lib.mcjj.de' type='A' id='e4c909a1d34567371b1a78b056a40463' content='84.169.182.42'
+2025-10-15 10:07:40,989 - INFO - Record 8: name='dc-manage.mcjj.de' type='A' id='a37f6f8b0f87c8f91e578bdf4a3c1023' content='87.168.192.145'
+2025-10-15 10:07:40,989 - INFO - 🔄 Update dc-manage.mcjj.de (ID: a37f6f8b0f87c8f91e578bdf4a3c1023) → 84.169.182.42
+2025-10-15 10:07:42,035 - INFO - ✅ SUCCESS dc-manage.mcjj.de (ID: a37f6f8b0f87c8f91e578bdf4a3c1023)
+2025-10-15 10:07:42,035 - INFO - Record 9: name='dc.mcjj.de' type='A' id='a8bebd08bef8c564dd623ecb3e8a77ce' content='87.168.192.145'
+2025-10-15 10:07:42,036 - INFO - 🔄 Update dc.mcjj.de (ID: a8bebd08bef8c564dd623ecb3e8a77ce) → 84.169.182.42
+2025-10-15 10:07:42,946 - INFO - ✅ SUCCESS dc.mcjj.de (ID: a8bebd08bef8c564dd623ecb3e8a77ce)
+2025-10-15 10:07:42,947 - INFO - Record 10: name='fmd.mcjj.de' type='A' id='e578694b50cbfa970b8b90fdeb5ed576' content='87.168.192.145'
+2025-10-15 10:07:42,947 - INFO - 🔄 Update fmd.mcjj.de (ID: e578694b50cbfa970b8b90fdeb5ed576) → 84.169.182.42
+2025-10-15 10:07:43,646 - INFO - ✅ SUCCESS fmd.mcjj.de (ID: e578694b50cbfa970b8b90fdeb5ed576)
+2025-10-15 10:07:43,647 - INFO - Record 11: name='home.mcjj.de' type='A' id='3081e6ee580c564b8719e2f62de9afb7' content='87.168.192.145'
+2025-10-15 10:07:43,647 - INFO - 🔄 Update home.mcjj.de (ID: 3081e6ee580c564b8719e2f62de9afb7) → 84.169.182.42
+2025-10-15 10:07:44,667 - INFO - ✅ SUCCESS home.mcjj.de (ID: 3081e6ee580c564b8719e2f62de9afb7)
+2025-10-15 10:07:44,669 - INFO - Record 12: name='led.mcjj.de' type='A' id='e0da494075a31cf3273324cfaff76b4d' content='87.168.192.145'
+2025-10-15 10:07:44,669 - INFO - 🔄 Update led.mcjj.de (ID: e0da494075a31cf3273324cfaff76b4d) → 84.169.182.42
+2025-10-15 10:07:45,492 - INFO - ✅ SUCCESS led.mcjj.de (ID: e0da494075a31cf3273324cfaff76b4d)
+2025-10-15 10:07:45,493 - INFO - Record 13: name='mail.mcjj.de' type='A' id='0ac62edf68512219ccbbff3579fe12c3' content='87.168.192.145'
+2025-10-15 10:07:45,493 - INFO - 🔄 Update mail.mcjj.de (ID: 0ac62edf68512219ccbbff3579fe12c3) → 84.169.182.42
+2025-10-15 10:07:46,322 - INFO - ✅ SUCCESS mail.mcjj.de (ID: 0ac62edf68512219ccbbff3579fe12c3)
+2025-10-15 10:07:46,323 - INFO - Record 14: name='mcjj.de' type='A' id='45bdd623acd5fd6adf5c6b319ed599ce' content='87.168.192.145'
+2025-10-15 10:07:46,323 - INFO - 🔄 Update mcjj.de (ID: 45bdd623acd5fd6adf5c6b319ed599ce) → 84.169.182.42
+2025-10-15 10:07:47,595 - INFO - ✅ SUCCESS mcjj.de (ID: 45bdd623acd5fd6adf5c6b319ed599ce)
+2025-10-15 10:07:47,596 - INFO - Record 15: name='mc.mcjj.de' type='A' id='51f9d731574470e6b0d4128c96156e5c' content='87.168.192.145'
+2025-10-15 10:07:47,596 - INFO - 🔄 Update mc.mcjj.de (ID: 51f9d731574470e6b0d4128c96156e5c) → 84.169.182.42
+2025-10-15 10:07:48,597 - INFO - ✅ SUCCESS mc.mcjj.de (ID: 51f9d731574470e6b0d4128c96156e5c)
+2025-10-15 10:07:48,597 - INFO - Record 16: name='media.mcjj.de' type='A' id='3f57f59e6aac35543d12527213466f1d' content='87.168.192.145'
+2025-10-15 10:07:48,598 - INFO - 🔄 Update media.mcjj.de (ID: 3f57f59e6aac35543d12527213466f1d) → 84.169.182.42
+2025-10-15 10:07:49,512 - INFO - ✅ SUCCESS media.mcjj.de (ID: 3f57f59e6aac35543d12527213466f1d)
+2025-10-15 10:07:49,512 - INFO - Record 17: name='musik.mcjj.de' type='A' id='d7f1b7e2ca6a243c275862dcc99876cc' content='87.168.192.145'
+2025-10-15 10:07:49,513 - INFO - 🔄 Update musik.mcjj.de (ID: d7f1b7e2ca6a243c275862dcc99876cc) → 84.169.182.42
+2025-10-15 10:07:50,428 - INFO - ✅ SUCCESS musik.mcjj.de (ID: d7f1b7e2ca6a243c275862dcc99876cc)
+2025-10-15 10:07:50,428 - INFO - Record 18: name='node.mcjj.de' type='A' id='0ec396a6d8b36c314f234b56908ec7d0' content='87.168.192.145'
+2025-10-15 10:07:50,429 - INFO - 🔄 Update node.mcjj.de (ID: 0ec396a6d8b36c314f234b56908ec7d0) → 84.169.182.42
+2025-10-15 10:07:51,274 - INFO - ✅ SUCCESS node.mcjj.de (ID: 0ec396a6d8b36c314f234b56908ec7d0)
+2025-10-15 10:07:51,275 - INFO - Record 19: name='panel.mcjj.de' type='A' id='3619ec0866d417714ae7fcb51c8c1c27' content='87.168.192.145'
+2025-10-15 10:07:51,275 - INFO - 🔄 Update panel.mcjj.de (ID: 3619ec0866d417714ae7fcb51c8c1c27) → 84.169.182.42
+2025-10-15 10:07:52,183 - INFO - ✅ SUCCESS panel.mcjj.de (ID: 3619ec0866d417714ae7fcb51c8c1c27)
+2025-10-15 10:07:52,186 - INFO - Record 20: name='pdf.mcjj.de' type='A' id='b96ca1469277b4a55e3707e6cd5c56e4' content='87.168.192.145'
+2025-10-15 10:07:52,188 - INFO - 🔄 Update pdf.mcjj.de (ID: b96ca1469277b4a55e3707e6cd5c56e4) → 84.169.182.42
+2025-10-15 10:07:53,149 - INFO - ✅ SUCCESS pdf.mcjj.de (ID: b96ca1469277b4a55e3707e6cd5c56e4)
+2025-10-15 10:07:53,150 - INFO - Record 21: name='plan.mcjj.de' type='A' id='fa2e0077d5ab9668a3217672bbef9173' content='87.168.192.145'
+2025-10-15 10:07:53,150 - INFO - 🔄 Update plan.mcjj.de (ID: fa2e0077d5ab9668a3217672bbef9173) → 84.169.182.42
+2025-10-15 10:07:54,193 - INFO - ✅ SUCCESS plan.mcjj.de (ID: fa2e0077d5ab9668a3217672bbef9173)
+2025-10-15 10:07:54,193 - INFO - Record 22: name='pma.mcjj.de' type='A' id='8059edf6a07b3221db13fb557c362951' content='87.168.192.145'
+2025-10-15 10:07:54,193 - INFO - 🔄 Update pma.mcjj.de (ID: 8059edf6a07b3221db13fb557c362951) → 84.169.182.42
+2025-10-15 10:07:55,150 - INFO - ✅ SUCCESS pma.mcjj.de (ID: 8059edf6a07b3221db13fb557c362951)
+2025-10-15 10:07:55,151 - INFO - Record 23: name='store.mcjj.de' type='A' id='60665f850afeeb8dcf31addfab45aabc' content='87.168.192.145'
+2025-10-15 10:07:55,151 - INFO - 🔄 Update store.mcjj.de (ID: 60665f850afeeb8dcf31addfab45aabc) → 84.169.182.42
+2025-10-15 10:07:56,060 - INFO - ✅ SUCCESS store.mcjj.de (ID: 60665f850afeeb8dcf31addfab45aabc)
+2025-10-15 10:07:56,061 - INFO - Record 24: name='tickets.mcjj.de' type='A' id='cf8b448e77f5f1e6b3ce5970cd04da85' content='87.168.192.145'
+2025-10-15 10:07:56,061 - INFO - 🔄 Update tickets.mcjj.de (ID: cf8b448e77f5f1e6b3ce5970cd04da85) → 84.169.182.42
+2025-10-15 10:07:57,279 - INFO - ✅ SUCCESS tickets.mcjj.de (ID: cf8b448e77f5f1e6b3ce5970cd04da85)
+2025-10-15 10:07:57,280 - INFO - Record 25: name='vpn.mcjj.de' type='A' id='8846e0a248cac97ba2d22aaf50e6da01' content='87.168.192.145'
+2025-10-15 10:07:57,281 - INFO - 🔄 Update vpn.mcjj.de (ID: 8846e0a248cac97ba2d22aaf50e6da01) → 84.169.182.42
+2025-10-15 10:07:57,991 - INFO - ✅ SUCCESS vpn.mcjj.de (ID: 8846e0a248cac97ba2d22aaf50e6da01)
+2025-10-15 10:07:57,991 - INFO - Record 26: name='web.mcjj.de' type='A' id='e069ca750fc0e19f3acd9f80853a8ba2' content='87.168.192.145'
+2025-10-15 10:07:57,992 - INFO - 🔄 Update web.mcjj.de (ID: e069ca750fc0e19f3acd9f80853a8ba2) → 84.169.182.42
+2025-10-15 10:07:58,643 - INFO - ✅ SUCCESS web.mcjj.de (ID: e069ca750fc0e19f3acd9f80853a8ba2)
+2025-10-15 10:07:58,644 - INFO - Record 27: name='wiki.mcjj.de' type='A' id='39f7b6d7217c48570e3a082e83af7e33' content='87.168.192.145'
+2025-10-15 10:07:58,644 - INFO - 🔄 Update wiki.mcjj.de (ID: 39f7b6d7217c48570e3a082e83af7e33) → 84.169.182.42
+2025-10-15 10:07:59,670 - INFO - ✅ SUCCESS wiki.mcjj.de (ID: 39f7b6d7217c48570e3a082e83af7e33)
+2025-10-15 10:07:59,671 - INFO - Record 28: name='www.fmd.mcjj.de' type='A' id='41fd941b45a458dcc32791ab68bace4d' content='87.168.192.145'
+2025-10-15 10:07:59,671 - INFO - 🔄 Update www.fmd.mcjj.de (ID: 41fd941b45a458dcc32791ab68bace4d) → 84.169.182.42
+2025-10-15 10:08:00,565 - INFO - ✅ SUCCESS www.fmd.mcjj.de (ID: 41fd941b45a458dcc32791ab68bace4d)
+2025-10-15 10:08:00,567 - INFO - Record 29: name='www.wirkaufendeinefreunde.mcjj.de' type='A' id='671aefe9732a07f3419e0ce19f7c21c5' content='87.168.192.145'
+2025-10-15 10:08:00,568 - INFO - 🔄 Update www.wirkaufendeinefreunde.mcjj.de (ID: 671aefe9732a07f3419e0ce19f7c21c5) → 84.169.182.42
+2025-10-15 10:08:01,640 - INFO - ✅ SUCCESS www.wirkaufendeinefreunde.mcjj.de (ID: 671aefe9732a07f3419e0ce19f7c21c5)
+2025-10-15 10:08:01,641 - INFO - Record 30: name='mail.mcjj.de' type='AAAA' id='a4f0f0904700f4b1ad2e5e8417ed7a64' content='2003:d9:f734:7d01:692:26ff:fe17:da90'
+2025-10-15 10:08:01,641 - INFO - 🔄 Update mail.mcjj.de (ID: a4f0f0904700f4b1ad2e5e8417ed7a64) → 2003:d9:f704:f019:be24:11ff:feee:fa59
+2025-10-15 10:08:02,633 - INFO - ✅ SUCCESS mail.mcjj.de (ID: a4f0f0904700f4b1ad2e5e8417ed7a64)
+2025-10-15 10:08:02,638 - INFO - 🎉 Auto-Update: 23/30 Records aktualisiert
+2025-10-15 10:08:02,642 - INFO - Alte Web-Sessions bereinigt
