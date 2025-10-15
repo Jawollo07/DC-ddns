@@ -1,0 +1,68 @@
+2025-10-15 09:43:42,144 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-10-15 09:43:42,147 - INFO - ✅ Verbindung zur MySQL-Datenbank hergestellt
+2025-10-15 09:43:42,149 - INFO - ✅ Datenbank-Tabellen initialisiert
+2025-10-15 09:43:42,150 - INFO - Starting DNS Bot with MySQL Database and Web Control Panel...
+2025-10-15 09:43:42,151 - WARNING - Privileged message content intent is missing, commands may not work as expected.
+2025-10-15 09:43:42,151 - INFO - logging in using static token
+2025-10-15 09:43:43,006 - INFO - Slash-Befehle synchronisiert
+2025-10-15 09:43:43,547 - INFO - Shard ID None has connected to Gateway (Session ID: a9cc2e499a4229b221b4c4faad7b6a5f).
+2025-10-15 09:43:45,552 - INFO - ✅ Bot bereit als DDNS#4771
+2025-10-15 09:43:45,552 - INFO - 🔧 Starte Web-Control-Panel...
+2025-10-15 09:43:45,559 - INFO - 🌐 Web-Control-Panel gestartet auf http://0.0.0.0:5000
+2025-10-15 09:43:45,563 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.178.174:5000
+2025-10-15 09:43:45,564 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-15 09:43:45,567 - INFO - 🔁 Auto-Update gestartet (Intervall: 30min)
+2025-10-15 09:43:46,626 - INFO - Öffentliche IPv4 ermittelt: 84.169.182.42
+2025-10-15 09:43:47,199 - INFO - Öffentliche IPv6 ermittelt: 2003:d9:f704:f019:be24:11ff:feee:fa59
+2025-10-15 09:43:48,369 - ERROR - Fehler in auto_update_loop: 'id'
+2025-10-15 09:43:48,375 - INFO - Alte Web-Sessions bereinigt
+2025-10-15 09:44:33,800 - INFO - 192.168.178.169 - - [15/Oct/2025 09:44:33] "GET / HTTP/1.1" 200 -
+2025-10-15 09:44:34,959 - INFO - Öffentliche IPv4 ermittelt: 84.169.182.42
+2025-10-15 09:44:35,552 - INFO - Öffentliche IPv6 ermittelt: 2003:d9:f704:f019:be24:11ff:feee:fa59
+2025-10-15 09:44:35,556 - INFO - 192.168.178.169 - - [15/Oct/2025 09:44:35] "GET /api/status HTTP/1.1" 200 -
+2025-10-15 09:44:41,434 - INFO - 192.168.178.169 - - [15/Oct/2025 09:44:41] "GET /api/logs?limit=100 HTTP/1.1" 200 -
+2025-10-15 09:45:07,148 - INFO - Öffentliche IPv4 ermittelt: 84.169.182.42
+2025-10-15 09:45:07,687 - INFO - Öffentliche IPv6 ermittelt: 2003:d9:f704:f019:be24:11ff:feee:fa59
+2025-10-15 09:45:07,690 - INFO - 192.168.178.169 - - [15/Oct/2025 09:45:07] "GET /api/status HTTP/1.1" 200 -
+2025-10-15 09:45:35,053 - INFO - Öffentliche IPv4 ermittelt: 84.169.182.42
+2025-10-15 09:45:35,604 - INFO - Öffentliche IPv6 ermittelt: 2003:d9:f704:f019:be24:11ff:feee:fa59
+2025-10-15 09:45:35,608 - INFO - 192.168.178.169 - - [15/Oct/2025 09:45:35] "GET /api/status HTTP/1.1" 200 -
+2025-10-15 09:46:05,107 - INFO - Öffentliche IPv4 ermittelt: 84.169.182.42
+2025-10-15 09:46:05,667 - INFO - Öffentliche IPv6 ermittelt: 2003:d9:f704:f019:be24:11ff:feee:fa59
+2025-10-15 09:46:05,671 - INFO - 192.168.178.169 - - [15/Oct/2025 09:46:05] "GET /api/status HTTP/1.1" 200 -
+2025-10-15 09:46:35,147 - INFO - Öffentliche IPv4 ermittelt: 84.169.182.42
+2025-10-15 09:46:35,692 - INFO - Öffentliche IPv6 ermittelt: 2003:d9:f704:f019:be24:11ff:feee:fa59
+2025-10-15 09:46:35,699 - INFO - 192.168.178.169 - - [15/Oct/2025 09:46:35] "GET /api/status HTTP/1.1" 200 -
+2025-10-15 09:47:05,076 - INFO - Öffentliche IPv4 ermittelt: 84.169.182.42
+2025-10-15 09:47:05,652 - INFO - Öffentliche IPv6 ermittelt: 2003:d9:f704:f019:be24:11ff:feee:fa59
+2025-10-15 09:47:05,655 - INFO - 192.168.178.169 - - [15/Oct/2025 09:47:05] "GET /api/status HTTP/1.1" 200 -
+2025-10-15 09:47:35,330 - INFO - Öffentliche IPv4 ermittelt: 84.169.182.42
+2025-10-15 09:47:35,858 - INFO - Öffentliche IPv6 ermittelt: 2003:d9:f704:f019:be24:11ff:feee:fa59
+2025-10-15 09:47:35,862 - INFO - 192.168.178.169 - - [15/Oct/2025 09:47:35] "GET /api/status HTTP/1.1" 200 -
+2025-10-15 09:48:52,125 - INFO - Öffentliche IPv4 ermittelt: 84.169.182.42
+2025-10-15 09:48:52,706 - INFO - Öffentliche IPv6 ermittelt: 2003:d9:f704:f019:be24:11ff:feee:fa59
+2025-10-15 09:48:52,709 - INFO - 192.168.178.169 - - [15/Oct/2025 09:48:52] "GET /api/status HTTP/1.1" 200 -
+2025-10-15 09:49:05,374 - INFO - Öffentliche IPv4 ermittelt: 84.169.182.42
+2025-10-15 09:49:05,958 - INFO - Öffentliche IPv6 ermittelt: 2003:d9:f704:f019:be24:11ff:feee:fa59
+2025-10-15 09:49:05,961 - INFO - 192.168.178.169 - - [15/Oct/2025 09:49:05] "GET /api/status HTTP/1.1" 200 -
+2025-10-15 09:49:35,283 - INFO - Öffentliche IPv4 ermittelt: 84.169.182.42
+2025-10-15 09:49:35,847 - INFO - Öffentliche IPv6 ermittelt: 2003:d9:f704:f019:be24:11ff:feee:fa59
+2025-10-15 09:49:35,851 - INFO - 192.168.178.169 - - [15/Oct/2025 09:49:35] "GET /api/status HTTP/1.1" 200 -
+2025-10-15 09:50:07,631 - INFO - Öffentliche IPv4 ermittelt: 84.169.182.42
+2025-10-15 09:50:08,172 - INFO - Öffentliche IPv6 ermittelt: 2003:d9:f704:f019:be24:11ff:feee:fa59
+2025-10-15 09:50:08,176 - INFO - 192.168.178.169 - - [15/Oct/2025 09:50:08] "GET /api/status HTTP/1.1" 200 -
+2025-10-15 09:50:47,920 - INFO - Öffentliche IPv4 ermittelt: 84.169.182.42
+2025-10-15 09:50:48,486 - INFO - Öffentliche IPv6 ermittelt: 2003:d9:f704:f019:be24:11ff:feee:fa59
+2025-10-15 09:50:48,489 - INFO - 192.168.178.169 - - [15/Oct/2025 09:50:48] "GET /api/status HTTP/1.1" 200 -
+2025-10-15 09:51:05,082 - INFO - Öffentliche IPv4 ermittelt: 84.169.182.42
+2025-10-15 09:51:05,637 - INFO - Öffentliche IPv6 ermittelt: 2003:d9:f704:f019:be24:11ff:feee:fa59
+2025-10-15 09:51:05,640 - INFO - 192.168.178.169 - - [15/Oct/2025 09:51:05] "GET /api/status HTTP/1.1" 200 -
+2025-10-15 09:51:35,041 - INFO - Öffentliche IPv4 ermittelt: 84.169.182.42
+2025-10-15 09:51:35,624 - INFO - Öffentliche IPv6 ermittelt: 2003:d9:f704:f019:be24:11ff:feee:fa59
+2025-10-15 09:51:35,627 - INFO - 192.168.178.169 - - [15/Oct/2025 09:51:35] "GET /api/status HTTP/1.1" 200 -
+2025-10-15 09:52:52,248 - INFO - Öffentliche IPv4 ermittelt: 84.169.182.42
+2025-10-15 09:52:52,823 - INFO - Öffentliche IPv6 ermittelt: 2003:d9:f704:f019:be24:11ff:feee:fa59
+2025-10-15 09:52:52,827 - INFO - 192.168.178.169 - - [15/Oct/2025 09:52:52] "GET /api/status HTTP/1.1" 200 -

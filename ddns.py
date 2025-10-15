@@ -163,7 +163,17 @@ class MySQLManager:
                     INDEX idx_login_time (login_time)
                 )
             """)
-            
+            # 🆕 BEREINIGUNG: Records ohne ID fixen
+            cursor.execute("""
+                UPDATE dns_records 
+                SET id = CONCAT(name, '_', type, '_', UNIX_TIMESTAMP())
+                WHERE id IS NULL OR id = ''
+            """)
+            fixed_count = cursor.rowcount
+            if fixed_count > 0:
+                logger.warning(f"⚠️ {fixed_count} Records ohne ID gefixt!")
+    
+    self.connection.commit()
             # Initiale Bot-Statistik zeile einfügen
             cursor.execute("""
                 INSERT IGNORE INTO bot_stats (id, total_updates) 
@@ -731,19 +741,31 @@ async def on_command(ctx):
     """Wird aufgerufen wenn ein Befehl ausgeführt wird"""
     bot.db.log_system_event("INFO", f"Discord Befehl ausgeführt: {ctx.command}", "DISCORD_BOT", str(ctx.author.id))
 
-# 🔁 Auto-Update Loop
+# 🔁 Auto-Update Loop - GEFIXTE VERSION
 @tasks.loop(minutes=AUTO_UPDATE_INTERVAL_MIN)
 async def auto_update_loop():
-    """Automatische DNS-Aktualisierung"""
+    """Automatische DNS-Aktualisierung - GEFIXT"""
     logger.info(f"🔁 Auto-Update gestartet (Intervall: {AUTO_UPDATE_INTERVAL_MIN}min)")
     
     try:
+        # 🆕 HOL ECHTE RECORDS DIREKT VON CLOUDFLARE (mit ID!)
         records = bot.cf_api.get_all_dns_records()
         ipv4 = bot.ip_manager.get_public_ip(False)
         ipv6 = bot.ip_manager.get_public_ip(True)
         
+        if not records:
+            logger.warning("⚠️ Keine DNS-Records gefunden")
+            return
+            
         update_count = 0
+        update_messages = []
+        
         for record in records:
+            # ✅ SICHERSTELLEN, DASS ID VORHANDEN IST
+            if not record.get("id"):
+                logger.error(f"❌ Record ohne ID: {record.get('name')} ({record.get('type')})")
+                continue
+                
             ip = ipv6 if record["type"] == "AAAA" else ipv4
             if ip and record["content"] != ip:
                 record_data = {
@@ -754,22 +776,41 @@ async def auto_update_loop():
                     "proxied": record.get("proxied", False)
                 }
                 
-                if bot.cf_api.update_dns_record(record["id"], record_data, "AUTO", "AUTO_UPDATE"):
+                record_id = record["id"]  # ✅ ECHTE CLOUDFLARE ID
+                logger.debug(f"Update Record ID: {record_id} | Name: {record['name']}")
+                
+                if bot.cf_api.update_dns_record(record_id, record_data, "AUTO", "AUTO_UPDATE"):
                     update_count += 1
-                    logger.info(f"Record {record['name']} aktualisiert auf {ip}")
+                    update_messages.append(f"✅ {record['name']} → {ip}")
+                    logger.info(f"✅ Record {record['name']} aktualisiert auf {ip} (ID: {record_id})")
+                else:
+                    update_messages.append(f"❌ Fehler: {record['name']}")
+                    logger.error(f"❌ Update fehlgeschlagen für {record['name']} (ID: {record_id})")
+            else:
+                logger.debug(f"⏭️ {record['name']}: Keine Änderung notwendig")
         
         # Update Bot-Statistiken
         if update_count > 0:
             bot.db.update_bot_stats(update_count, is_auto_update=True)
+            logger.info(f"📊 Auto-Update: {update_count} Records aktualisiert")
+        else:
+            logger.info("📊 Auto-Update: Keine Änderungen notwendig")
         
         bot.last_update = datetime.now()
         bot.update_count += update_count
-        logger.info(f"Auto-Update abgeschlossen: {update_count} Records aktualisiert")
+        
+        # LOGGE ERGEBNISSE
+        bot.db.log_system_event(
+            "INFO", 
+            f"Auto-Update: {update_count} Records aktualisiert\n" + 
+            "\n".join(update_messages[:5]),  # Max 5 Nachrichten
+            "AUTO_UPDATE"
+        )
         
     except Exception as e:
-        logger.error(f"Fehler in auto_update_loop: {e}")
-        bot.db.log_system_event("ERROR", f"Auto-Update Fehler: {str(e)}", "AUTO_UPDATE")
-
+        error_msg = f"Auto-Update Fehler: {str(e)}"
+        logger.error(error_msg)
+        bot.db.log_system_event("ERROR", error_msg, "AUTO_UPDATE")
 # 🧹 Session-Cleanup Loop
 @tasks.loop(hours=24)
 async def session_cleanup_loop():
