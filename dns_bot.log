@@ -257,3 +257,4 @@
 2025-10-15 10:08:02,633 - INFO - ✅ SUCCESS mail.mcjj.de (ID: a4f0f0904700f4b1ad2e5e8417ed7a64)
 2025-10-15 10:08:02,638 - INFO - 🎉 Auto-Update: 23/30 Records aktualisiert
 2025-10-15 10:08:02,642 - INFO - Alte Web-Sessions bereinigt
+2026-01-18 19:42:56,807 - WARNING - PyNaCl is not installed, voice will NOT be supported

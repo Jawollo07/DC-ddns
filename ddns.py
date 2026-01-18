@@ -58,64 +58,6 @@ logger = logging.getLogger(__name__)
 # Flask App für Web-Control-Panel
 web_app = Flask(__name__)
 web_app.secret_key = os.getenv("FLASK_SECRET_KEY", "your-secret-key-here")
-
-class PortManager:
-    """Klasse zur Handhabung von UPnP Portfreigaben"""
-    
-    def __init__(self, db: MySQLManager):
-        self.db = db
-        self.upnp = miniupnpc.UPnP()
-        self.upnp.discoverdelay = 200
-        self.active_ports = []
-
-    def open_ports(self, tcp_ports: List[int] = [], udp_ports: List[int] = []) -> Dict[str, Any]:
-        """Versucht, eine Liste von Ports am Router zu öffnen"""
-        results = {"success": [], "error": []}
-        
-        try:
-            self.upnp.discover()
-            self.upnp.selectigd()
-            
-            # TCP Ports
-            for port in tcp_ports:
-                try:
-                    # addportmapping(port, protocol, internal_client, internal_port, description, remote_host)
-                    self.upnp.addportmapping(port, 'TCP', self.upnp.lanaddr, port, f'DNS-Bot TCP {port}', '')
-                    results["success"].append(f"TCP {port}")
-                    self.db.log_system_event("INFO", f"Port TCP {port} via UPnP geöffnet", "PORT_MANAGER")
-                except Exception as e:
-                    results["error"].append(f"TCP {port}: {str(e)}")
-
-            # UDP Ports
-            for port in udp_ports:
-                try:
-                    self.upnp.addportmapping(port, 'UDP', self.upnp.lanaddr, port, f'DNS-Bot UDP {port}', '')
-                    results["success"].append(f"UDP {port}")
-                    self.db.log_system_event("INFO", f"Port UDP {port} via UPnP geöffnet", "PORT_MANAGER")
-                except Exception as e:
-                    results["error"].append(f"UDP {port}: {str(e)}")
-            
-            return results
-        except Exception as e:
-            logger.error(f"UPnP Fehler: {e}")
-            return {"error": [str(e)], "success": []}
-
-    def get_active_mappings(self):
-        """Listet alle aktiven Freigaben auf dem Router (UPnP)"""
-        mappings = []
-        try:
-            self.upnp.discover()
-            self.upnp.selectigd()
-            i = 0
-            while True:
-                p = self.upnp.getgenericportmapping(i)
-                if p is None:
-                    break
-                mappings.append(p)
-                i += 1
-            return mappings
-        except:
-            return []
 class MySQLManager:
     """Klasse zur Handhabung der MySQL-Datenbank"""
     
@@ -798,7 +740,63 @@ class WebInterface:
         flask_thread.start()
         logger.info(f"🌐 Web-Control-Panel gestartet auf http://{WEB_HOST}:{WEB_PORT}")
         self.db.log_system_event("INFO", f"Web-Control-Panel gestartet auf Port {WEB_PORT}", "WEB_INTERFACE")
+class PortManager:
+    """Klasse zur Handhabung von UPnP Portfreigaben"""
+    
+    def __init__(self, db: MySQLManager):
+        self.db = db
+        self.upnp = miniupnpc.UPnP()
+        self.upnp.discoverdelay = 200
+        self.active_ports = []
 
+    def open_ports(self, tcp_ports: List[int] = [], udp_ports: List[int] = []) -> Dict[str, Any]:
+        """Versucht, eine Liste von Ports am Router zu öffnen"""
+        results = {"success": [], "error": []}
+        
+        try:
+            self.upnp.discover()
+            self.upnp.selectigd()
+            
+            # TCP Ports
+            for port in tcp_ports:
+                try:
+                    # addportmapping(port, protocol, internal_client, internal_port, description, remote_host)
+                    self.upnp.addportmapping(port, 'TCP', self.upnp.lanaddr, port, f'DNS-Bot TCP {port}', '')
+                    results["success"].append(f"TCP {port}")
+                    self.db.log_system_event("INFO", f"Port TCP {port} via UPnP geöffnet", "PORT_MANAGER")
+                except Exception as e:
+                    results["error"].append(f"TCP {port}: {str(e)}")
+
+            # UDP Ports
+            for port in udp_ports:
+                try:
+                    self.upnp.addportmapping(port, 'UDP', self.upnp.lanaddr, port, f'DNS-Bot UDP {port}', '')
+                    results["success"].append(f"UDP {port}")
+                    self.db.log_system_event("INFO", f"Port UDP {port} via UPnP geöffnet", "PORT_MANAGER")
+                except Exception as e:
+                    results["error"].append(f"UDP {port}: {str(e)}")
+            
+            return results
+        except Exception as e:
+            logger.error(f"UPnP Fehler: {e}")
+            return {"error": [str(e)], "success": []}
+
+    def get_active_mappings(self):
+        """Listet alle aktiven Freigaben auf dem Router (UPnP)"""
+        mappings = []
+        try:
+            self.upnp.discover()
+            self.upnp.selectigd()
+            i = 0
+            while True:
+                p = self.upnp.getgenericportmapping(i)
+                if p is None:
+                    break
+                mappings.append(p)
+                i += 1
+            return mappings
+        except:
+            return []
 @bot.event
 async def on_ready():
     """Wird aufgerufen wenn der Bot bereit ist"""
