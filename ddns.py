@@ -497,12 +497,11 @@ class DNSBot(commands.Bot):
         self.cf_api = CloudflareAPI(CLOUDFLARE_API_TOKEN, ZONE_ID, self.db)
         self.ip_manager = IPManager()
         self.certbot_manager = CertbotManager(CERTBOT_DOMAINS, CERTBOT_EMAIL, self.db)
-        
+        self.port_manager = PortManager(self.db)
         # Status-Variablen
         self.last_update = None
         self.update_count = 0
         self.web_interface = None
-        self.port_manager = PortManager(self.db)
     async def setup_hook(self):
         """Wird beim Start des Bots aufgerufen"""
         await self.tree.sync()
