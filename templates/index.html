@@ -110,7 +110,29 @@
                         </table>
                     </div>
                 </div>
-
+                <div class="card mt-4">
+                    <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">🌐 Aktive Port-Freigaben (UPnP/PCP)</h5>
+                        <button class="btn btn-sm btn-light" onclick="refreshPorts()">Aktualisieren</button>
+                    </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Protokoll</th>
+                                    <th>Externer Port</th>
+                                    <th>Interner Port</th>
+                                    <th>Beschreibung</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                        <tbody id="port-table-body">
+                        </tbody>
+                    </table>
+                        </div>
+                    </div>
+                </div>
                 <div class="card">
                     <h2>Zertifikat Management</h2>
                     <button class="btn btn-success" onclick="renewCertificates()">Zertifikate erneuern</button>
@@ -167,7 +189,29 @@
             await fetch('/logout');
             window.location.reload();
         }
+        async function refreshPorts() {
+    const response = await fetch('/api/ports');
+    const ports = await response.json();
+    const tbody = document.getElementById('port-table-body');
+    // Clear previous content
+    tbody.innerHTML = '';
 
+    ports.forEach(p => {
+        // p[0]: Externer Port, p[1]: Protokoll, p[2]: (Internal Client, Internal Port), p[3]: Description
+        const row = `<tr>
+            <td><span class="badge bg-secondary">${p[1]}</span></td>
+            <td><strong>${p[0]}</strong></td>
+            <td>${p[2][1]}</td>
+            <td>${p[3]}</td>
+            <td><span class="badge bg-success">Aktiv</span></td>
+        </tr>`;
+        tbody.insertAdjacentHTML('beforeend', row);
+    });
+    
+    if (ports.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="5" class="text-center text-muted">Keine aktiven UPnP-Freigaben gefunden.</td></tr>';
+    }
+}
         // Status aktualisieren
         async function updateStatus() {
             try {
@@ -350,6 +394,7 @@
                 }
             });
         });
+        document.addEventListener('DOMContentLoaded', refreshPorts);
     </script>
 </body>
 </html>

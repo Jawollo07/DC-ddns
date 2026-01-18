@@ -14,6 +14,7 @@ import asyncio
 import mysql.connector
 from mysql.connector import Error
 import json
+import miniupnpc  # Neu hinzufügen
 
 # 🌐 .env laden
 load_dotenv()
@@ -58,6 +59,63 @@ logger = logging.getLogger(__name__)
 web_app = Flask(__name__)
 web_app.secret_key = os.getenv("FLASK_SECRET_KEY", "your-secret-key-here")
 
+class PortManager:
+    """Klasse zur Handhabung von UPnP Portfreigaben"""
+    
+    def __init__(self, db: MySQLManager):
+        self.db = db
+        self.upnp = miniupnpc.UPnP()
+        self.upnp.discoverdelay = 200
+        self.active_ports = []
+
+    def open_ports(self, tcp_ports: List[int] = [], udp_ports: List[int] = []) -> Dict[str, Any]:
+        """Versucht, eine Liste von Ports am Router zu öffnen"""
+        results = {"success": [], "error": []}
+        
+        try:
+            self.upnp.discover()
+            self.upnp.selectigd()
+            
+            # TCP Ports
+            for port in tcp_ports:
+                try:
+                    # addportmapping(port, protocol, internal_client, internal_port, description, remote_host)
+                    self.upnp.addportmapping(port, 'TCP', self.upnp.lanaddr, port, f'DNS-Bot TCP {port}', '')
+                    results["success"].append(f"TCP {port}")
+                    self.db.log_system_event("INFO", f"Port TCP {port} via UPnP geöffnet", "PORT_MANAGER")
+                except Exception as e:
+                    results["error"].append(f"TCP {port}: {str(e)}")
+
+            # UDP Ports
+            for port in udp_ports:
+                try:
+                    self.upnp.addportmapping(port, 'UDP', self.upnp.lanaddr, port, f'DNS-Bot UDP {port}', '')
+                    results["success"].append(f"UDP {port}")
+                    self.db.log_system_event("INFO", f"Port UDP {port} via UPnP geöffnet", "PORT_MANAGER")
+                except Exception as e:
+                    results["error"].append(f"UDP {port}: {str(e)}")
+            
+            return results
+        except Exception as e:
+            logger.error(f"UPnP Fehler: {e}")
+            return {"error": [str(e)], "success": []}
+
+    def get_active_mappings(self):
+        """Listet alle aktiven Freigaben auf dem Router (UPnP)"""
+        mappings = []
+        try:
+            self.upnp.discover()
+            self.upnp.selectigd()
+            i = 0
+            while True:
+                p = self.upnp.getgenericportmapping(i)
+                if p is None:
+                    break
+                mappings.append(p)
+                i += 1
+            return mappings
+        except:
+            return []
 class MySQLManager:
     """Klasse zur Handhabung der MySQL-Datenbank"""
     
@@ -502,7 +560,7 @@ class DNSBot(commands.Bot):
         self.last_update = None
         self.update_count = 0
         self.web_interface = None
-    
+        self.port_manager = PortManager(self.db)
     async def setup_hook(self):
         """Wird beim Start des Bots aufgerufen"""
         await self.tree.sync()
@@ -534,7 +592,14 @@ class WebInterface:
     
     def setup_routes(self):
         """Definiert die Web-Routen"""
-        
+        # In WebInterface.setup_routes
+        @self.app.route('/api/ports')
+        def api_ports():
+            if not session.get('logged_in'):
+                return jsonify({'error': 'Nicht autorisiert'}), 401
+    
+            mappings = self.bot.port_manager.get_active_mappings()
+            return jsonify(mappings)
         @self.app.route('/')
         def index():
             if not session.get('logged_in'):
@@ -738,6 +803,10 @@ class WebInterface:
 async def on_ready():
     """Wird aufgerufen wenn der Bot bereit ist"""
     logger.info(f"✅ Bot bereit als {bot.user}")
+    needed_tcp = [WEB_PORT, 80, 443] 
+    res = bot.port_manager.open_ports(tcp_ports=needed_tcp)
+    logger.info(f"Ports Status: {res}")
+    # ------------------------------------
     logger.info(f"🔧 Starte Web-Control-Panel...")
     bot.start_web_interface()
     auto_update_loop.start()
