@@ -795,8 +795,9 @@ class WebInterface:
         
         flask_thread = threading.Thread(target=run_flask, daemon=True)
         flask_thread.start()
-logger.info(f"🌐 Web-Control-Panel gestartet auf http://{WEB_HOST}:{WEB_PORT}")
-self.db.log_system_event("INFO", f"Web-Control-Panel gestartet auf Port {WEB_PORT}", "WEB_INTERFACE")
+        logger.info(f"🌐 Web-Control-Panel gestartet auf http://{WEB_HOST}:{WEB_PORT}")
+        self.db.log_system_event("INFO", f"Web-Control-Panel gestartet auf Port {WEB_PORT}", "WEB_INTERFACE")
+
 @bot.event
 async def on_ready():
     """Wird aufgerufen wenn der Bot bereit ist"""
