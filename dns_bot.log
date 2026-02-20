@@ -258,3 +258,573 @@
 2025-10-15 10:08:02,638 - INFO - 🎉 Auto-Update: 23/30 Records aktualisiert
 2025-10-15 10:08:02,642 - INFO - Alte Web-Sessions bereinigt
 2026-01-18 19:42:56,807 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2026-02-20 21:01:35,858 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2026-02-20 21:01:35,986 - ERROR - MySQL Verbindungsfehler: 2059 (HY000): Authentication plugin 'auth_gssapi_client' cannot be loaded: Das angegebene Modul wurde nicht gefunden.
+
+2026-02-20 21:04:51,321 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2026-02-20 21:04:51,332 - ERROR - MySQL Verbindungsfehler: 2059 (HY000): Authentication plugin 'auth_gssapi_client' cannot be loaded: Das angegebene Modul wurde nicht gefunden.
+
+2026-02-20 21:05:01,032 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2026-02-20 21:05:01,043 - ERROR - MySQL Verbindungsfehler: 2059 (HY000): Authentication plugin 'auth_gssapi_client' cannot be loaded: Das angegebene Modul wurde nicht gefunden.
+
+2026-02-20 21:06:03,810 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2026-02-20 21:06:03,830 - ERROR - MariaDB Verbindungsfehler: Access denied for user 'ddns_user'@'localhost' (using password: YES)
+2026-02-20 21:07:50,424 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2026-02-20 21:07:50,431 - INFO - MariaDB Verbindung hergestellt
+2026-02-20 21:08:47,859 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2026-02-20 21:08:47,864 - INFO - MariaDB Verbindung hergestellt
+2026-02-20 21:08:47,865 - INFO - Datenbank-Tabellen initialisiert
+2026-02-20 21:08:47,866 - INFO - Starting DNS Bot with MySQL Database and Web Control Panel...
+2026-02-20 21:08:47,868 - WARNING - Privileged message content intent is missing, commands may not work as expected.
+2026-02-20 21:08:47,868 - INFO - logging in using static token
+2026-02-20 21:08:48,904 - INFO - Slash-Commands synchronisiert
+2026-02-20 21:08:49,458 - INFO - Shard ID None has connected to Gateway (Session ID: 23ab0f97c908ed08cf77a19cef783bf0).
+2026-02-20 21:08:51,596 - INFO - Bot online als DDNS#4771
+2026-02-20 21:08:52,875 - INFO - UPnP Port-Status: {'success': [], 'error': ['TCP 5000: Action not authorized', 'TCP 80: Action not authorized', 'TCP 443: Action not authorized']}
+2026-02-20 21:08:53,851 - ERROR - IP-Abfrage Fehler: HTTPSConnectionPool(host='api.ipify.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000019FCBECE850>: Failed to resolve 'api.ipify.org' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:08:53,853 - ERROR - IP-Abfrage Fehler: HTTPSConnectionPool(host='api64.ipify.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000019FCBECDF90>: Failed to resolve 'api64.ipify.org' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:08:53,855 - INFO - Record 1: name='admin.mcjj.de' type='A' id='d4d798fb76690086b0db3099b6485cfc' content='87.168.202.96'
+2026-02-20 21:08:53,855 - INFO - Record 2: name='ban.mcjj.de' type='A' id='f6e4a3b118b190d14cb614e9fb6c3283' content='87.168.202.96'
+2026-02-20 21:08:53,856 - INFO - Record 3: name='book.mcjj.de' type='A' id='4fa2c13ec9a631e3e7cc471cbb879573' content='87.168.202.96'
+2026-02-20 21:08:53,856 - INFO - Record 4: name='cloud.mcjj.de' type='A' id='0aa6f71f79c5a099ea5cf68d7887e8ed' content='87.168.202.96'
+2026-02-20 21:08:53,856 - INFO - Record 5: name='db.mcjj.de' type='A' id='169bdef56cf1bc67dcef0c8980618270' content='87.168.202.96'
+2026-02-20 21:08:53,856 - INFO - Record 6: name='dc-lib.mcjj.de' type='A' id='e4c909a1d34567371b1a78b056a40463' content='87.168.202.96'
+2026-02-20 21:08:53,856 - INFO - Record 7: name='dc-manage.mcjj.de' type='A' id='a37f6f8b0f87c8f91e578bdf4a3c1023' content='87.168.202.96'
+2026-02-20 21:08:53,856 - INFO - Record 8: name='dc.mcjj.de' type='A' id='f5ea5deaf6d8884ccd4433ab2f2524a4' content='87.168.202.96'
+2026-02-20 21:08:53,857 - INFO - Record 9: name='ddns.mcjj.de' type='A' id='8077fa4a44cb25d4e430b1296ea73658' content='87.168.202.96'
+2026-02-20 21:08:53,857 - INFO - Record 10: name='discord.mcjj.de' type='A' id='daa89dc342c4f7a47d4a9f9526f6d427' content='87.168.202.96'
+2026-02-20 21:08:53,857 - INFO - Record 11: name='dns-manage.mcjj.de' type='A' id='c01457f5a315f327e18f0d8632012f29' content='87.168.202.96'
+2026-02-20 21:08:53,857 - INFO - Record 12: name='dns.mcjj.de' type='A' id='4d778a1ae723bd2daf561b2201e7a110' content='87.168.202.96'
+2026-02-20 21:08:53,857 - INFO - Record 13: name='event-manage.mcjj.de' type='A' id='5b98f68852c15cc3c4fd377ffaec72bb' content='87.168.202.96'
+2026-02-20 21:08:53,857 - INFO - Record 14: name='fmd.mcjj.de' type='A' id='e578694b50cbfa970b8b90fdeb5ed576' content='87.168.202.96'
+2026-02-20 21:08:53,857 - INFO - Record 15: name='home.mcjj.de' type='A' id='3081e6ee580c564b8719e2f62de9afb7' content='87.168.202.96'
+2026-02-20 21:08:53,857 - INFO - Record 16: name='ia.mcjj.de' type='A' id='a2703bc850172859b7fed4d35e74bbd5' content='87.168.202.96'
+2026-02-20 21:08:53,857 - INFO - Record 17: name='lam.mcjj.de' type='A' id='716e481d291ae83cf6e9c3533b8f4922' content='87.168.202.96'
+2026-02-20 21:08:53,858 - INFO - Record 18: name='ldap.mcjj.de' type='A' id='cd031622dfe783973ce19dfbad2013c7' content='87.168.202.96'
+2026-02-20 21:08:53,858 - INFO - Record 19: name='led.mcjj.de' type='A' id='e0da494075a31cf3273324cfaff76b4d' content='87.168.202.96'
+2026-02-20 21:08:53,858 - INFO - Record 20: name='mail.mcjj.de' type='A' id='9b82410dcb56eba6dbc3c607163ad713' content='87.168.202.96'
+2026-02-20 21:08:53,858 - INFO - Record 21: name='manage.mcjj.de' type='A' id='be0cd6373add959053603827c7b46332' content='87.168.202.96'
+2026-02-20 21:08:53,858 - INFO - Record 22: name='map.mcjj.de' type='A' id='320ca23a520f45ae163e0b0fc0773f42' content='87.168.202.96'
+2026-02-20 21:08:53,858 - INFO - Record 23: name='mcjj.de' type='A' id='8860de1df6970714a0eac1e62e7a179c' content='87.168.202.96'
+2026-02-20 21:08:53,858 - INFO - Record 24: name='media.mcjj.de' type='A' id='3f57f59e6aac35543d12527213466f1d' content='87.168.202.96'
+2026-02-20 21:08:53,858 - INFO - Record 25: name='musik.mcjj.de' type='A' id='d7f1b7e2ca6a243c275862dcc99876cc' content='87.168.202.96'
+2026-02-20 21:08:53,858 - INFO - Record 26: name='node.mcjj.de' type='A' id='0ec396a6d8b36c314f234b56908ec7d0' content='87.168.202.96'
+2026-02-20 21:08:53,858 - INFO - Record 27: name='pack.mcjj.de' type='A' id='3eb65c01ed544ce522f2d5d0623f39a7' content='87.168.202.96'
+2026-02-20 21:08:53,858 - INFO - Record 28: name='panel.mcjj.de' type='A' id='3619ec0866d417714ae7fcb51c8c1c27' content='87.168.202.96'
+2026-02-20 21:08:53,858 - INFO - Record 29: name='pdf.mcjj.de' type='A' id='b96ca1469277b4a55e3707e6cd5c56e4' content='87.168.202.96'
+2026-02-20 21:08:53,858 - INFO - Record 30: name='plan.mcjj.de' type='A' id='fa2e0077d5ab9668a3217672bbef9173' content='87.168.202.96'
+2026-02-20 21:08:53,859 - INFO - Record 31: name='pma.mcjj.de' type='A' id='8059edf6a07b3221db13fb557c362951' content='87.168.202.96'
+2026-02-20 21:08:53,859 - INFO - Record 32: name='ring.mcjj.de' type='A' id='6c3f59e45db628c3cdbcc8f179481fdd' content='87.168.202.96'
+2026-02-20 21:08:53,859 - INFO - Record 33: name='safe.mcjj.de' type='A' id='3ff2ea873773113b9c8afcbea68abf58' content='87.168.202.96'
+2026-02-20 21:08:53,859 - INFO - Record 34: name='store.mcjj.de' type='A' id='60665f850afeeb8dcf31addfab45aabc' content='87.168.202.96'
+2026-02-20 21:08:53,859 - INFO - Record 35: name='talk.mcjj.de' type='A' id='f9a7f325fbef82d2263e2d0f9f773ff1' content='87.168.202.96'
+2026-02-20 21:08:53,859 - INFO - Record 36: name='tickets.mcjj.de' type='A' id='cf8b448e77f5f1e6b3ce5970cd04da85' content='87.168.202.96'
+2026-02-20 21:08:53,859 - INFO - Record 37: name='vpn.mcjj.de' type='A' id='8846e0a248cac97ba2d22aaf50e6da01' content='87.168.202.96'
+2026-02-20 21:08:53,859 - INFO - Record 38: name='web.mcjj.de' type='A' id='e069ca750fc0e19f3acd9f80853a8ba2' content='87.168.202.96'
+2026-02-20 21:08:53,859 - INFO - Record 39: name='wiki.mcjj.de' type='A' id='39f7b6d7217c48570e3a082e83af7e33' content='87.168.202.96'
+2026-02-20 21:08:53,860 - INFO - Record 40: name='www.fmd.mcjj.de' type='A' id='41fd941b45a458dcc32791ab68bace4d' content='87.168.202.96'
+2026-02-20 21:08:53,860 - INFO - Record 41: name='www.mcjj.de' type='A' id='7df1b6c840743ad3f474a456b7bbbb95' content='87.168.202.96'
+2026-02-20 21:08:53,860 - INFO - Record 42: name='www.pma.mcjj.de' type='A' id='49436ddff904f111058779b199f7169f' content='87.168.202.96'
+2026-02-20 21:08:53,860 - INFO - Record 43: name='countdown.mcjj.de' type='AAAA' id='1bf50f452fb1cf5d755d32bdbcf5a2dd' content='100::'
+2026-02-20 21:08:53,860 - INFO - Record 44: name='cryption.mcjj.de' type='AAAA' id='05511470bffb2a09add4a211d6ac770a' content='100::'
+2026-02-20 21:08:53,864 - INFO - Alte Web-Sessions bereinigt
+2026-02-20 21:08:57,875 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.178.40:5000
+2026-02-20 21:08:57,876 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-20 21:09:02,624 - INFO - 192.168.178.40 - - [20/Feb/2026 21:09:02] "GET / HTTP/1.1" 200 -
+2026-02-20 21:09:02,662 - INFO - 192.168.178.40 - - [20/Feb/2026 21:09:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-02-20 21:09:10,731 - INFO - 192.168.178.40 - - [20/Feb/2026 21:09:10] "POST /login HTTP/1.1" 200 -
+2026-02-20 21:09:22,799 - INFO - 192.168.178.40 - - [20/Feb/2026 21:09:22] "POST /login HTTP/1.1" 200 -
+2026-02-20 21:09:23,558 - INFO - 192.168.178.40 - - [20/Feb/2026 21:09:23] "POST /login HTTP/1.1" 200 -
+2026-02-20 21:09:23,742 - INFO - 192.168.178.40 - - [20/Feb/2026 21:09:23] "POST /login HTTP/1.1" 200 -
+2026-02-20 21:09:23,910 - INFO - 192.168.178.40 - - [20/Feb/2026 21:09:23] "POST /login HTTP/1.1" 200 -
+2026-02-20 21:09:57,164 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2026-02-20 21:09:57,169 - INFO - MariaDB Verbindung hergestellt
+2026-02-20 21:09:57,169 - INFO - Datenbank-Tabellen initialisiert
+2026-02-20 21:09:57,170 - INFO - Starting DNS Bot with MySQL Database and Web Control Panel...
+2026-02-20 21:09:57,170 - WARNING - Privileged message content intent is missing, commands may not work as expected.
+2026-02-20 21:09:57,170 - INFO - logging in using static token
+2026-02-20 21:09:58,154 - INFO - Slash-Commands synchronisiert
+2026-02-20 21:09:58,650 - INFO - Shard ID None has connected to Gateway (Session ID: 270c9433ad4de75f1b345630f4129b99).
+2026-02-20 21:10:00,716 - INFO - Bot online als DDNS#4771
+2026-02-20 21:10:01,897 - INFO - UPnP Port-Status: {'success': [], 'error': ['TCP 5000: Action not authorized', 'TCP 80: Action not authorized', 'TCP 443: Action not authorized']}
+2026-02-20 21:10:04,082 - ERROR - IP-Abfrage Fehler: HTTPSConnectionPool(host='api.ipify.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000023C6060E850>: Failed to resolve 'api.ipify.org' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:10:04,084 - ERROR - IP-Abfrage Fehler: HTTPSConnectionPool(host='api64.ipify.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000023C6060DF90>: Failed to resolve 'api64.ipify.org' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:10:04,086 - INFO - Record 1: name='admin.mcjj.de' type='A' id='d4d798fb76690086b0db3099b6485cfc' content='87.168.202.96'
+2026-02-20 21:10:04,086 - INFO - Record 2: name='ban.mcjj.de' type='A' id='f6e4a3b118b190d14cb614e9fb6c3283' content='87.168.202.96'
+2026-02-20 21:10:04,086 - INFO - Record 3: name='book.mcjj.de' type='A' id='4fa2c13ec9a631e3e7cc471cbb879573' content='87.168.202.96'
+2026-02-20 21:10:04,086 - INFO - Record 4: name='cloud.mcjj.de' type='A' id='0aa6f71f79c5a099ea5cf68d7887e8ed' content='87.168.202.96'
+2026-02-20 21:10:04,086 - INFO - Record 5: name='db.mcjj.de' type='A' id='169bdef56cf1bc67dcef0c8980618270' content='87.168.202.96'
+2026-02-20 21:10:04,087 - INFO - Record 6: name='dc-lib.mcjj.de' type='A' id='e4c909a1d34567371b1a78b056a40463' content='87.168.202.96'
+2026-02-20 21:10:04,087 - INFO - Record 7: name='dc-manage.mcjj.de' type='A' id='a37f6f8b0f87c8f91e578bdf4a3c1023' content='87.168.202.96'
+2026-02-20 21:10:04,087 - INFO - Record 8: name='dc.mcjj.de' type='A' id='f5ea5deaf6d8884ccd4433ab2f2524a4' content='87.168.202.96'
+2026-02-20 21:10:04,087 - INFO - Record 9: name='ddns.mcjj.de' type='A' id='8077fa4a44cb25d4e430b1296ea73658' content='87.168.202.96'
+2026-02-20 21:10:04,087 - INFO - Record 10: name='discord.mcjj.de' type='A' id='daa89dc342c4f7a47d4a9f9526f6d427' content='87.168.202.96'
+2026-02-20 21:10:04,087 - INFO - Record 11: name='dns-manage.mcjj.de' type='A' id='c01457f5a315f327e18f0d8632012f29' content='87.168.202.96'
+2026-02-20 21:10:04,087 - INFO - Record 12: name='dns.mcjj.de' type='A' id='4d778a1ae723bd2daf561b2201e7a110' content='87.168.202.96'
+2026-02-20 21:10:04,087 - INFO - Record 13: name='event-manage.mcjj.de' type='A' id='5b98f68852c15cc3c4fd377ffaec72bb' content='87.168.202.96'
+2026-02-20 21:10:04,087 - INFO - Record 14: name='fmd.mcjj.de' type='A' id='e578694b50cbfa970b8b90fdeb5ed576' content='87.168.202.96'
+2026-02-20 21:10:04,088 - INFO - Record 15: name='home.mcjj.de' type='A' id='3081e6ee580c564b8719e2f62de9afb7' content='87.168.202.96'
+2026-02-20 21:10:04,088 - INFO - Record 16: name='ia.mcjj.de' type='A' id='a2703bc850172859b7fed4d35e74bbd5' content='87.168.202.96'
+2026-02-20 21:10:04,088 - INFO - Record 17: name='lam.mcjj.de' type='A' id='716e481d291ae83cf6e9c3533b8f4922' content='87.168.202.96'
+2026-02-20 21:10:04,088 - INFO - Record 18: name='ldap.mcjj.de' type='A' id='cd031622dfe783973ce19dfbad2013c7' content='87.168.202.96'
+2026-02-20 21:10:04,088 - INFO - Record 19: name='led.mcjj.de' type='A' id='e0da494075a31cf3273324cfaff76b4d' content='87.168.202.96'
+2026-02-20 21:10:04,088 - INFO - Record 20: name='mail.mcjj.de' type='A' id='9b82410dcb56eba6dbc3c607163ad713' content='87.168.202.96'
+2026-02-20 21:10:04,088 - INFO - Record 21: name='manage.mcjj.de' type='A' id='be0cd6373add959053603827c7b46332' content='87.168.202.96'
+2026-02-20 21:10:04,088 - INFO - Record 22: name='map.mcjj.de' type='A' id='320ca23a520f45ae163e0b0fc0773f42' content='87.168.202.96'
+2026-02-20 21:10:04,088 - INFO - Record 23: name='mcjj.de' type='A' id='8860de1df6970714a0eac1e62e7a179c' content='87.168.202.96'
+2026-02-20 21:10:04,088 - INFO - Record 24: name='media.mcjj.de' type='A' id='3f57f59e6aac35543d12527213466f1d' content='87.168.202.96'
+2026-02-20 21:10:04,089 - INFO - Record 25: name='musik.mcjj.de' type='A' id='d7f1b7e2ca6a243c275862dcc99876cc' content='87.168.202.96'
+2026-02-20 21:10:04,089 - INFO - Record 26: name='node.mcjj.de' type='A' id='0ec396a6d8b36c314f234b56908ec7d0' content='87.168.202.96'
+2026-02-20 21:10:04,089 - INFO - Record 27: name='pack.mcjj.de' type='A' id='3eb65c01ed544ce522f2d5d0623f39a7' content='87.168.202.96'
+2026-02-20 21:10:04,089 - INFO - Record 28: name='panel.mcjj.de' type='A' id='3619ec0866d417714ae7fcb51c8c1c27' content='87.168.202.96'
+2026-02-20 21:10:04,089 - INFO - Record 29: name='pdf.mcjj.de' type='A' id='b96ca1469277b4a55e3707e6cd5c56e4' content='87.168.202.96'
+2026-02-20 21:10:04,089 - INFO - Record 30: name='plan.mcjj.de' type='A' id='fa2e0077d5ab9668a3217672bbef9173' content='87.168.202.96'
+2026-02-20 21:10:04,089 - INFO - Record 31: name='pma.mcjj.de' type='A' id='8059edf6a07b3221db13fb557c362951' content='87.168.202.96'
+2026-02-20 21:10:04,089 - INFO - Record 32: name='ring.mcjj.de' type='A' id='6c3f59e45db628c3cdbcc8f179481fdd' content='87.168.202.96'
+2026-02-20 21:10:04,089 - INFO - Record 33: name='safe.mcjj.de' type='A' id='3ff2ea873773113b9c8afcbea68abf58' content='87.168.202.96'
+2026-02-20 21:10:04,089 - INFO - Record 34: name='store.mcjj.de' type='A' id='60665f850afeeb8dcf31addfab45aabc' content='87.168.202.96'
+2026-02-20 21:10:04,089 - INFO - Record 35: name='talk.mcjj.de' type='A' id='f9a7f325fbef82d2263e2d0f9f773ff1' content='87.168.202.96'
+2026-02-20 21:10:04,090 - INFO - Record 36: name='tickets.mcjj.de' type='A' id='cf8b448e77f5f1e6b3ce5970cd04da85' content='87.168.202.96'
+2026-02-20 21:10:04,090 - INFO - Record 37: name='vpn.mcjj.de' type='A' id='8846e0a248cac97ba2d22aaf50e6da01' content='87.168.202.96'
+2026-02-20 21:10:04,090 - INFO - Record 38: name='web.mcjj.de' type='A' id='e069ca750fc0e19f3acd9f80853a8ba2' content='87.168.202.96'
+2026-02-20 21:10:04,090 - INFO - Record 39: name='wiki.mcjj.de' type='A' id='39f7b6d7217c48570e3a082e83af7e33' content='87.168.202.96'
+2026-02-20 21:10:04,090 - INFO - Record 40: name='www.fmd.mcjj.de' type='A' id='41fd941b45a458dcc32791ab68bace4d' content='87.168.202.96'
+2026-02-20 21:10:04,090 - INFO - Record 41: name='www.mcjj.de' type='A' id='7df1b6c840743ad3f474a456b7bbbb95' content='87.168.202.96'
+2026-02-20 21:10:04,090 - INFO - Record 42: name='www.pma.mcjj.de' type='A' id='49436ddff904f111058779b199f7169f' content='87.168.202.96'
+2026-02-20 21:10:04,090 - INFO - Record 43: name='countdown.mcjj.de' type='AAAA' id='1bf50f452fb1cf5d755d32bdbcf5a2dd' content='100::'
+2026-02-20 21:10:04,090 - INFO - Record 44: name='cryption.mcjj.de' type='AAAA' id='05511470bffb2a09add4a211d6ac770a' content='100::'
+2026-02-20 21:10:04,094 - INFO - Alte Web-Sessions bereinigt
+2026-02-20 21:10:06,854 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.178.40:5000
+2026-02-20 21:10:06,854 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-20 21:10:10,174 - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "C:\Users\janni\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\janni\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\janni\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\janni\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\janni\Nextcloud\Dev\DC-ddns\web.py", line 36, in login
+    db.save_web_session(session.sid, username, ip, request.headers.get('User-Agent', '')) # type: ignore
+                        ^^^^^^^^^^^
+AttributeError: 'SecureCookieSession' object has no attribute 'sid'
+2026-02-20 21:10:10,177 - INFO - 192.168.178.40 - - [20/Feb/2026 21:10:10] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2026-02-20 21:10:16,182 - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "C:\Users\janni\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\janni\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\janni\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\janni\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\janni\Nextcloud\Dev\DC-ddns\web.py", line 36, in login
+    db.save_web_session(session.sid, username, ip, request.headers.get('User-Agent', '')) # type: ignore
+                        ^^^^^^^^^^^
+AttributeError: 'SecureCookieSession' object has no attribute 'sid'
+2026-02-20 21:10:16,183 - INFO - 192.168.178.40 - - [20/Feb/2026 21:10:16] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2026-02-20 21:11:37,934 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2026-02-20 21:11:37,939 - INFO - MariaDB Verbindung hergestellt
+2026-02-20 21:11:37,939 - INFO - Datenbank-Tabellen initialisiert
+2026-02-20 21:11:37,940 - INFO - Starting DNS Bot with MySQL Database and Web Control Panel...
+2026-02-20 21:11:37,940 - WARNING - Privileged message content intent is missing, commands may not work as expected.
+2026-02-20 21:11:37,941 - INFO - logging in using static token
+2026-02-20 21:11:38,968 - INFO - Slash-Commands synchronisiert
+2026-02-20 21:11:39,466 - INFO - Shard ID None has connected to Gateway (Session ID: f19a6bd7037eb4d3c877d9d294d1d111).
+2026-02-20 21:11:41,480 - INFO - Bot online als DDNS#4771
+2026-02-20 21:11:42,744 - INFO - UPnP Port-Status: {'success': [], 'error': ['TCP 5000: Action not authorized', 'TCP 80: Action not authorized', 'TCP 443: Action not authorized']}
+2026-02-20 21:11:43,523 - ERROR - IP-Abfrage Fehler: HTTPSConnectionPool(host='api.ipify.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002258B31E850>: Failed to resolve 'api.ipify.org' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:11:43,532 - ERROR - IP-Abfrage Fehler: HTTPSConnectionPool(host='api64.ipify.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002258B31DF90>: Failed to resolve 'api64.ipify.org' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:11:43,533 - INFO - Record 1: name='admin.mcjj.de' type='A' id='d4d798fb76690086b0db3099b6485cfc' content='87.168.202.96'
+2026-02-20 21:11:43,533 - INFO - Record 2: name='ban.mcjj.de' type='A' id='f6e4a3b118b190d14cb614e9fb6c3283' content='87.168.202.96'
+2026-02-20 21:11:43,533 - INFO - Record 3: name='book.mcjj.de' type='A' id='4fa2c13ec9a631e3e7cc471cbb879573' content='87.168.202.96'
+2026-02-20 21:11:43,534 - INFO - Record 4: name='cloud.mcjj.de' type='A' id='0aa6f71f79c5a099ea5cf68d7887e8ed' content='87.168.202.96'
+2026-02-20 21:11:43,534 - INFO - Record 5: name='db.mcjj.de' type='A' id='169bdef56cf1bc67dcef0c8980618270' content='87.168.202.96'
+2026-02-20 21:11:43,534 - INFO - Record 6: name='dc-lib.mcjj.de' type='A' id='e4c909a1d34567371b1a78b056a40463' content='87.168.202.96'
+2026-02-20 21:11:43,534 - INFO - Record 7: name='dc-manage.mcjj.de' type='A' id='a37f6f8b0f87c8f91e578bdf4a3c1023' content='87.168.202.96'
+2026-02-20 21:11:43,534 - INFO - Record 8: name='dc.mcjj.de' type='A' id='f5ea5deaf6d8884ccd4433ab2f2524a4' content='87.168.202.96'
+2026-02-20 21:11:43,534 - INFO - Record 9: name='ddns.mcjj.de' type='A' id='8077fa4a44cb25d4e430b1296ea73658' content='87.168.202.96'
+2026-02-20 21:11:43,534 - INFO - Record 10: name='discord.mcjj.de' type='A' id='daa89dc342c4f7a47d4a9f9526f6d427' content='87.168.202.96'
+2026-02-20 21:11:43,534 - INFO - Record 11: name='dns-manage.mcjj.de' type='A' id='c01457f5a315f327e18f0d8632012f29' content='87.168.202.96'
+2026-02-20 21:11:43,534 - INFO - Record 12: name='dns.mcjj.de' type='A' id='4d778a1ae723bd2daf561b2201e7a110' content='87.168.202.96'
+2026-02-20 21:11:43,534 - INFO - Record 13: name='event-manage.mcjj.de' type='A' id='5b98f68852c15cc3c4fd377ffaec72bb' content='87.168.202.96'
+2026-02-20 21:11:43,534 - INFO - Record 14: name='fmd.mcjj.de' type='A' id='e578694b50cbfa970b8b90fdeb5ed576' content='87.168.202.96'
+2026-02-20 21:11:43,534 - INFO - Record 15: name='home.mcjj.de' type='A' id='3081e6ee580c564b8719e2f62de9afb7' content='87.168.202.96'
+2026-02-20 21:11:43,534 - INFO - Record 16: name='ia.mcjj.de' type='A' id='a2703bc850172859b7fed4d35e74bbd5' content='87.168.202.96'
+2026-02-20 21:11:43,534 - INFO - Record 17: name='lam.mcjj.de' type='A' id='716e481d291ae83cf6e9c3533b8f4922' content='87.168.202.96'
+2026-02-20 21:11:43,534 - INFO - Record 18: name='ldap.mcjj.de' type='A' id='cd031622dfe783973ce19dfbad2013c7' content='87.168.202.96'
+2026-02-20 21:11:43,534 - INFO - Record 19: name='led.mcjj.de' type='A' id='e0da494075a31cf3273324cfaff76b4d' content='87.168.202.96'
+2026-02-20 21:11:43,534 - INFO - Record 20: name='mail.mcjj.de' type='A' id='9b82410dcb56eba6dbc3c607163ad713' content='87.168.202.96'
+2026-02-20 21:11:43,534 - INFO - Record 21: name='manage.mcjj.de' type='A' id='be0cd6373add959053603827c7b46332' content='87.168.202.96'
+2026-02-20 21:11:43,535 - INFO - Record 22: name='map.mcjj.de' type='A' id='320ca23a520f45ae163e0b0fc0773f42' content='87.168.202.96'
+2026-02-20 21:11:43,535 - INFO - Record 23: name='mcjj.de' type='A' id='8860de1df6970714a0eac1e62e7a179c' content='87.168.202.96'
+2026-02-20 21:11:43,535 - INFO - Record 24: name='media.mcjj.de' type='A' id='3f57f59e6aac35543d12527213466f1d' content='87.168.202.96'
+2026-02-20 21:11:43,535 - INFO - Record 25: name='musik.mcjj.de' type='A' id='d7f1b7e2ca6a243c275862dcc99876cc' content='87.168.202.96'
+2026-02-20 21:11:43,535 - INFO - Record 26: name='node.mcjj.de' type='A' id='0ec396a6d8b36c314f234b56908ec7d0' content='87.168.202.96'
+2026-02-20 21:11:43,535 - INFO - Record 27: name='pack.mcjj.de' type='A' id='3eb65c01ed544ce522f2d5d0623f39a7' content='87.168.202.96'
+2026-02-20 21:11:43,535 - INFO - Record 28: name='panel.mcjj.de' type='A' id='3619ec0866d417714ae7fcb51c8c1c27' content='87.168.202.96'
+2026-02-20 21:11:43,535 - INFO - Record 29: name='pdf.mcjj.de' type='A' id='b96ca1469277b4a55e3707e6cd5c56e4' content='87.168.202.96'
+2026-02-20 21:11:43,535 - INFO - Record 30: name='plan.mcjj.de' type='A' id='fa2e0077d5ab9668a3217672bbef9173' content='87.168.202.96'
+2026-02-20 21:11:43,535 - INFO - Record 31: name='pma.mcjj.de' type='A' id='8059edf6a07b3221db13fb557c362951' content='87.168.202.96'
+2026-02-20 21:11:43,535 - INFO - Record 32: name='ring.mcjj.de' type='A' id='6c3f59e45db628c3cdbcc8f179481fdd' content='87.168.202.96'
+2026-02-20 21:11:43,535 - INFO - Record 33: name='safe.mcjj.de' type='A' id='3ff2ea873773113b9c8afcbea68abf58' content='87.168.202.96'
+2026-02-20 21:11:43,535 - INFO - Record 34: name='store.mcjj.de' type='A' id='60665f850afeeb8dcf31addfab45aabc' content='87.168.202.96'
+2026-02-20 21:11:43,536 - INFO - Record 35: name='talk.mcjj.de' type='A' id='f9a7f325fbef82d2263e2d0f9f773ff1' content='87.168.202.96'
+2026-02-20 21:11:43,536 - INFO - Record 36: name='tickets.mcjj.de' type='A' id='cf8b448e77f5f1e6b3ce5970cd04da85' content='87.168.202.96'
+2026-02-20 21:11:43,536 - INFO - Record 37: name='vpn.mcjj.de' type='A' id='8846e0a248cac97ba2d22aaf50e6da01' content='87.168.202.96'
+2026-02-20 21:11:43,536 - INFO - Record 38: name='web.mcjj.de' type='A' id='e069ca750fc0e19f3acd9f80853a8ba2' content='87.168.202.96'
+2026-02-20 21:11:43,536 - INFO - Record 39: name='wiki.mcjj.de' type='A' id='39f7b6d7217c48570e3a082e83af7e33' content='87.168.202.96'
+2026-02-20 21:11:43,536 - INFO - Record 40: name='www.fmd.mcjj.de' type='A' id='41fd941b45a458dcc32791ab68bace4d' content='87.168.202.96'
+2026-02-20 21:11:43,536 - INFO - Record 41: name='www.mcjj.de' type='A' id='7df1b6c840743ad3f474a456b7bbbb95' content='87.168.202.96'
+2026-02-20 21:11:43,536 - INFO - Record 42: name='www.pma.mcjj.de' type='A' id='49436ddff904f111058779b199f7169f' content='87.168.202.96'
+2026-02-20 21:11:43,536 - INFO - Record 43: name='countdown.mcjj.de' type='AAAA' id='1bf50f452fb1cf5d755d32bdbcf5a2dd' content='100::'
+2026-02-20 21:11:43,536 - INFO - Record 44: name='cryption.mcjj.de' type='AAAA' id='05511470bffb2a09add4a211d6ac770a' content='100::'
+2026-02-20 21:11:43,539 - INFO - Alte Web-Sessions bereinigt
+2026-02-20 21:11:47,710 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.178.40:5000
+2026-02-20 21:11:47,711 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-20 21:11:52,775 - INFO - 192.168.178.40 - - [20/Feb/2026 21:11:52] "GET / HTTP/1.1" 200 -
+2026-02-20 21:11:52,793 - INFO - 192.168.178.40 - - [20/Feb/2026 21:11:52] "[33mGET /api/ports HTTP/1.1[0m" 404 -
+2026-02-20 21:11:53,541 - ERROR - IP-Abfrage Fehler: HTTPSConnectionPool(host='api.ipify.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002258B31E5D0>: Failed to resolve 'api.ipify.org' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:11:53,547 - ERROR - IP-Abfrage Fehler: HTTPSConnectionPool(host='api64.ipify.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002258B31FED0>: Failed to resolve 'api64.ipify.org' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:11:53,548 - INFO - 192.168.178.40 - - [20/Feb/2026 21:11:53] "GET /api/status HTTP/1.1" 200 -
+2026-02-20 21:12:07,924 - INFO - 192.168.178.40 - - [20/Feb/2026 21:12:07] "GET / HTTP/1.1" 200 -
+2026-02-20 21:12:07,939 - INFO - 192.168.178.40 - - [20/Feb/2026 21:12:07] "[33mGET /api/ports HTTP/1.1[0m" 404 -
+2026-02-20 21:12:08,638 - ERROR - IP-Abfrage Fehler: HTTPSConnectionPool(host='api.ipify.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002258B4A0910>: Failed to resolve 'api.ipify.org' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:12:08,648 - ERROR - IP-Abfrage Fehler: HTTPSConnectionPool(host='api64.ipify.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002258B4A0A50>: Failed to resolve 'api64.ipify.org' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:12:08,648 - INFO - 192.168.178.40 - - [20/Feb/2026 21:12:08] "GET /api/status HTTP/1.1" 200 -
+2026-02-20 21:12:10,135 - INFO - 192.168.178.40 - - [20/Feb/2026 21:12:10] "[33mGET /api/history?limit=50 HTTP/1.1[0m" 404 -
+2026-02-20 21:12:11,791 - INFO - 192.168.178.40 - - [20/Feb/2026 21:12:11] "[33mGET /api/logs?limit=100 HTTP/1.1[0m" 404 -
+2026-02-20 21:12:12,927 - INFO - 192.168.178.40 - - [20/Feb/2026 21:12:12] "[33mGET /api/logs?limit=100 HTTP/1.1[0m" 404 -
+2026-02-20 21:12:14,215 - INFO - 192.168.178.40 - - [20/Feb/2026 21:12:14] "[33mGET /api/history?limit=50 HTTP/1.1[0m" 404 -
+2026-02-20 21:12:39,113 - ERROR - IP-Abfrage Fehler: HTTPSConnectionPool(host='api.ipify.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002258B31FC50>: Failed to resolve 'api.ipify.org' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:12:39,115 - ERROR - IP-Abfrage Fehler: HTTPSConnectionPool(host='api64.ipify.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002258B31F250>: Failed to resolve 'api64.ipify.org' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:12:39,116 - INFO - 192.168.178.40 - - [20/Feb/2026 21:12:39] "GET /api/status HTTP/1.1" 200 -
+2026-02-20 21:13:09,163 - ERROR - IP-Abfrage Fehler: HTTPSConnectionPool(host='api.ipify.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002258B31FED0>: Failed to resolve 'api.ipify.org' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:13:09,175 - ERROR - IP-Abfrage Fehler: HTTPSConnectionPool(host='api64.ipify.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002258B31E5D0>: Failed to resolve 'api64.ipify.org' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:13:09,176 - INFO - 192.168.178.40 - - [20/Feb/2026 21:13:09] "GET /api/status HTTP/1.1" 200 -
+2026-02-20 21:13:39,054 - ERROR - IP-Abfrage Fehler: HTTPSConnectionPool(host='api.ipify.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002258B31D950>: Failed to resolve 'api.ipify.org' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:13:39,070 - ERROR - IP-Abfrage Fehler: HTTPSConnectionPool(host='api64.ipify.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002258B31D810>: Failed to resolve 'api64.ipify.org' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:13:39,071 - INFO - 192.168.178.40 - - [20/Feb/2026 21:13:39] "GET /api/status HTTP/1.1" 200 -
+2026-02-20 21:14:08,076 - ERROR - IP-Abfrage Fehler: HTTPSConnectionPool(host='api.ipify.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002258B31DF90>: Failed to resolve 'api.ipify.org' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:14:08,087 - ERROR - IP-Abfrage Fehler: HTTPSConnectionPool(host='api64.ipify.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002258B31E990>: Failed to resolve 'api64.ipify.org' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:14:08,088 - INFO - 192.168.178.40 - - [20/Feb/2026 21:14:08] "GET /api/status HTTP/1.1" 200 -
+2026-02-20 21:14:38,001 - ERROR - IP-Abfrage Fehler: HTTPSConnectionPool(host='api.ipify.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002258B31E990>: Failed to resolve 'api.ipify.org' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:14:38,003 - ERROR - IP-Abfrage Fehler: HTTPSConnectionPool(host='api64.ipify.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002258B31DF90>: Failed to resolve 'api64.ipify.org' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:14:38,003 - INFO - 192.168.178.40 - - [20/Feb/2026 21:14:38] "GET /api/status HTTP/1.1" 200 -
+2026-02-20 21:14:42,965 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2026-02-20 21:14:42,970 - INFO - MariaDB Verbindung hergestellt
+2026-02-20 21:14:42,971 - INFO - Datenbank-Tabellen initialisiert
+2026-02-20 21:14:42,971 - INFO - Starting DNS Bot with MySQL Database and Web Control Panel...
+2026-02-20 21:14:42,972 - WARNING - Privileged message content intent is missing, commands may not work as expected.
+2026-02-20 21:14:42,972 - INFO - logging in using static token
+2026-02-20 21:14:44,005 - INFO - Slash-Commands synchronisiert
+2026-02-20 21:14:44,548 - INFO - Shard ID None has connected to Gateway (Session ID: 0cbe46930e30d8c6e9b78c671da6d7ed).
+2026-02-20 21:14:46,565 - INFO - Bot online als DDNS#4771
+2026-02-20 21:14:47,729 - INFO - UPnP Port-Status: {'success': [], 'error': ['TCP 5000: Action not authorized', 'TCP 80: Action not authorized', 'TCP 443: Action not authorized']}
+2026-02-20 21:14:48,436 - ERROR - IP-Abfrage Fehler: HTTPSConnectionPool(host='api.ipify.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D53816E850>: Failed to resolve 'api.ipify.org' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:14:48,445 - ERROR - IP-Abfrage Fehler: HTTPSConnectionPool(host='api64.ipify.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D53816DF90>: Failed to resolve 'api64.ipify.org' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:14:48,447 - INFO - Record 1: name='admin.mcjj.de' type='A' id='d4d798fb76690086b0db3099b6485cfc' content='87.168.202.96'
+2026-02-20 21:14:48,447 - INFO - Record 2: name='ban.mcjj.de' type='A' id='f6e4a3b118b190d14cb614e9fb6c3283' content='87.168.202.96'
+2026-02-20 21:14:48,447 - INFO - Record 3: name='book.mcjj.de' type='A' id='4fa2c13ec9a631e3e7cc471cbb879573' content='87.168.202.96'
+2026-02-20 21:14:48,447 - INFO - Record 4: name='cloud.mcjj.de' type='A' id='0aa6f71f79c5a099ea5cf68d7887e8ed' content='87.168.202.96'
+2026-02-20 21:14:48,447 - INFO - Record 5: name='db.mcjj.de' type='A' id='169bdef56cf1bc67dcef0c8980618270' content='87.168.202.96'
+2026-02-20 21:14:48,447 - INFO - Record 6: name='dc-lib.mcjj.de' type='A' id='e4c909a1d34567371b1a78b056a40463' content='87.168.202.96'
+2026-02-20 21:14:48,447 - INFO - Record 7: name='dc-manage.mcjj.de' type='A' id='a37f6f8b0f87c8f91e578bdf4a3c1023' content='87.168.202.96'
+2026-02-20 21:14:48,447 - INFO - Record 8: name='dc.mcjj.de' type='A' id='f5ea5deaf6d8884ccd4433ab2f2524a4' content='87.168.202.96'
+2026-02-20 21:14:48,447 - INFO - Record 9: name='ddns.mcjj.de' type='A' id='8077fa4a44cb25d4e430b1296ea73658' content='87.168.202.96'
+2026-02-20 21:14:48,447 - INFO - Record 10: name='discord.mcjj.de' type='A' id='daa89dc342c4f7a47d4a9f9526f6d427' content='87.168.202.96'
+2026-02-20 21:14:48,447 - INFO - Record 11: name='dns-manage.mcjj.de' type='A' id='c01457f5a315f327e18f0d8632012f29' content='87.168.202.96'
+2026-02-20 21:14:48,448 - INFO - Record 12: name='dns.mcjj.de' type='A' id='4d778a1ae723bd2daf561b2201e7a110' content='87.168.202.96'
+2026-02-20 21:14:48,448 - INFO - Record 13: name='event-manage.mcjj.de' type='A' id='5b98f68852c15cc3c4fd377ffaec72bb' content='87.168.202.96'
+2026-02-20 21:14:48,448 - INFO - Record 14: name='fmd.mcjj.de' type='A' id='e578694b50cbfa970b8b90fdeb5ed576' content='87.168.202.96'
+2026-02-20 21:14:48,448 - INFO - Record 15: name='home.mcjj.de' type='A' id='3081e6ee580c564b8719e2f62de9afb7' content='87.168.202.96'
+2026-02-20 21:14:48,448 - INFO - Record 16: name='ia.mcjj.de' type='A' id='a2703bc850172859b7fed4d35e74bbd5' content='87.168.202.96'
+2026-02-20 21:14:48,448 - INFO - Record 17: name='lam.mcjj.de' type='A' id='716e481d291ae83cf6e9c3533b8f4922' content='87.168.202.96'
+2026-02-20 21:14:48,448 - INFO - Record 18: name='ldap.mcjj.de' type='A' id='cd031622dfe783973ce19dfbad2013c7' content='87.168.202.96'
+2026-02-20 21:14:48,448 - INFO - Record 19: name='led.mcjj.de' type='A' id='e0da494075a31cf3273324cfaff76b4d' content='87.168.202.96'
+2026-02-20 21:14:48,448 - INFO - Record 20: name='mail.mcjj.de' type='A' id='9b82410dcb56eba6dbc3c607163ad713' content='87.168.202.96'
+2026-02-20 21:14:48,448 - INFO - Record 21: name='manage.mcjj.de' type='A' id='be0cd6373add959053603827c7b46332' content='87.168.202.96'
+2026-02-20 21:14:48,448 - INFO - Record 22: name='map.mcjj.de' type='A' id='320ca23a520f45ae163e0b0fc0773f42' content='87.168.202.96'
+2026-02-20 21:14:48,448 - INFO - Record 23: name='mcjj.de' type='A' id='8860de1df6970714a0eac1e62e7a179c' content='87.168.202.96'
+2026-02-20 21:14:48,448 - INFO - Record 24: name='media.mcjj.de' type='A' id='3f57f59e6aac35543d12527213466f1d' content='87.168.202.96'
+2026-02-20 21:14:48,448 - INFO - Record 25: name='musik.mcjj.de' type='A' id='d7f1b7e2ca6a243c275862dcc99876cc' content='87.168.202.96'
+2026-02-20 21:14:48,448 - INFO - Record 26: name='node.mcjj.de' type='A' id='0ec396a6d8b36c314f234b56908ec7d0' content='87.168.202.96'
+2026-02-20 21:14:48,448 - INFO - Record 27: name='pack.mcjj.de' type='A' id='3eb65c01ed544ce522f2d5d0623f39a7' content='87.168.202.96'
+2026-02-20 21:14:48,448 - INFO - Record 28: name='panel.mcjj.de' type='A' id='3619ec0866d417714ae7fcb51c8c1c27' content='87.168.202.96'
+2026-02-20 21:14:48,448 - INFO - Record 29: name='pdf.mcjj.de' type='A' id='b96ca1469277b4a55e3707e6cd5c56e4' content='87.168.202.96'
+2026-02-20 21:14:48,448 - INFO - Record 30: name='plan.mcjj.de' type='A' id='fa2e0077d5ab9668a3217672bbef9173' content='87.168.202.96'
+2026-02-20 21:14:48,449 - INFO - Record 31: name='pma.mcjj.de' type='A' id='8059edf6a07b3221db13fb557c362951' content='87.168.202.96'
+2026-02-20 21:14:48,449 - INFO - Record 32: name='ring.mcjj.de' type='A' id='6c3f59e45db628c3cdbcc8f179481fdd' content='87.168.202.96'
+2026-02-20 21:14:48,449 - INFO - Record 33: name='safe.mcjj.de' type='A' id='3ff2ea873773113b9c8afcbea68abf58' content='87.168.202.96'
+2026-02-20 21:14:48,449 - INFO - Record 34: name='store.mcjj.de' type='A' id='60665f850afeeb8dcf31addfab45aabc' content='87.168.202.96'
+2026-02-20 21:14:48,449 - INFO - Record 35: name='talk.mcjj.de' type='A' id='f9a7f325fbef82d2263e2d0f9f773ff1' content='87.168.202.96'
+2026-02-20 21:14:48,449 - INFO - Record 36: name='tickets.mcjj.de' type='A' id='cf8b448e77f5f1e6b3ce5970cd04da85' content='87.168.202.96'
+2026-02-20 21:14:48,449 - INFO - Record 37: name='vpn.mcjj.de' type='A' id='8846e0a248cac97ba2d22aaf50e6da01' content='87.168.202.96'
+2026-02-20 21:14:48,449 - INFO - Record 38: name='web.mcjj.de' type='A' id='e069ca750fc0e19f3acd9f80853a8ba2' content='87.168.202.96'
+2026-02-20 21:14:48,449 - INFO - Record 39: name='wiki.mcjj.de' type='A' id='39f7b6d7217c48570e3a082e83af7e33' content='87.168.202.96'
+2026-02-20 21:14:48,449 - INFO - Record 40: name='www.fmd.mcjj.de' type='A' id='41fd941b45a458dcc32791ab68bace4d' content='87.168.202.96'
+2026-02-20 21:14:48,449 - INFO - Record 41: name='www.mcjj.de' type='A' id='7df1b6c840743ad3f474a456b7bbbb95' content='87.168.202.96'
+2026-02-20 21:14:48,449 - INFO - Record 42: name='www.pma.mcjj.de' type='A' id='49436ddff904f111058779b199f7169f' content='87.168.202.96'
+2026-02-20 21:14:48,449 - INFO - Record 43: name='countdown.mcjj.de' type='AAAA' id='1bf50f452fb1cf5d755d32bdbcf5a2dd' content='100::'
+2026-02-20 21:14:48,449 - INFO - Record 44: name='cryption.mcjj.de' type='AAAA' id='05511470bffb2a09add4a211d6ac770a' content='100::'
+2026-02-20 21:14:48,452 - INFO - Alte Web-Sessions bereinigt
+2026-02-20 21:24:43,267 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2026-02-20 21:24:43,273 - INFO - MariaDB Verbindung hergestellt
+2026-02-20 21:24:43,273 - INFO - Datenbank-Tabellen initialisiert
+2026-02-20 21:24:43,274 - INFO - Starting DNS Bot with MySQL Database and Web Control Panel...
+2026-02-20 21:24:43,275 - WARNING - Privileged message content intent is missing, commands may not work as expected.
+2026-02-20 21:24:43,275 - INFO - logging in using static token
+2026-02-20 21:24:44,236 - INFO - Slash-Commands synchronisiert
+2026-02-20 21:24:44,923 - INFO - Shard ID None has connected to Gateway (Session ID: 924838560d087b0915e564c31bbae1bc).
+2026-02-20 21:24:46,938 - INFO - Bot online als DDNS#4771
+2026-02-20 21:24:48,134 - INFO - UPnP Port-Status: {'success': [], 'error': ['TCP 5000: Action not authorized', 'TCP 80: Action not authorized', 'TCP 443: Action not authorized']}
+2026-02-20 21:24:49,061 - ERROR - IP-Abfrage Fehler: HTTPSConnectionPool(host='api.ipify.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000237C49BE850>: Failed to resolve 'api.ipify.org' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:24:49,321 - INFO - Fallback IP: 87.168.202.96
+2026-02-20 21:24:49,326 - ERROR - IP-Abfrage Fehler: HTTPSConnectionPool(host='api64.ipify.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000237C49BEC10>: Failed to resolve 'api64.ipify.org' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:24:49,628 - ERROR - Fallback IP-Abfrage Fehler: 404 Client Error: Not Found for url: https://ifconfig.co/ipv6
+2026-02-20 21:24:49,630 - INFO - Record 1: name='admin.mcjj.de' type='A' id='d4d798fb76690086b0db3099b6485cfc' content='87.168.202.96'
+2026-02-20 21:24:49,630 - INFO - Record 2: name='ban.mcjj.de' type='A' id='f6e4a3b118b190d14cb614e9fb6c3283' content='87.168.202.96'
+2026-02-20 21:24:49,630 - INFO - Record 3: name='book.mcjj.de' type='A' id='4fa2c13ec9a631e3e7cc471cbb879573' content='87.168.202.96'
+2026-02-20 21:24:49,630 - INFO - Record 4: name='cloud.mcjj.de' type='A' id='0aa6f71f79c5a099ea5cf68d7887e8ed' content='87.168.202.96'
+2026-02-20 21:24:49,630 - INFO - Record 5: name='db.mcjj.de' type='A' id='169bdef56cf1bc67dcef0c8980618270' content='87.168.202.96'
+2026-02-20 21:24:49,630 - INFO - Record 6: name='dc-lib.mcjj.de' type='A' id='e4c909a1d34567371b1a78b056a40463' content='87.168.202.96'
+2026-02-20 21:24:49,630 - INFO - Record 7: name='dc-manage.mcjj.de' type='A' id='a37f6f8b0f87c8f91e578bdf4a3c1023' content='87.168.202.96'
+2026-02-20 21:24:49,630 - INFO - Record 8: name='dc.mcjj.de' type='A' id='f5ea5deaf6d8884ccd4433ab2f2524a4' content='87.168.202.96'
+2026-02-20 21:24:49,630 - INFO - Record 9: name='ddns.mcjj.de' type='A' id='8077fa4a44cb25d4e430b1296ea73658' content='87.168.202.96'
+2026-02-20 21:24:49,631 - INFO - Record 10: name='discord.mcjj.de' type='A' id='daa89dc342c4f7a47d4a9f9526f6d427' content='87.168.202.96'
+2026-02-20 21:24:49,631 - INFO - Record 11: name='dns-manage.mcjj.de' type='A' id='c01457f5a315f327e18f0d8632012f29' content='87.168.202.96'
+2026-02-20 21:24:49,631 - INFO - Record 12: name='dns.mcjj.de' type='A' id='4d778a1ae723bd2daf561b2201e7a110' content='87.168.202.96'
+2026-02-20 21:24:49,631 - INFO - Record 13: name='event-manage.mcjj.de' type='A' id='5b98f68852c15cc3c4fd377ffaec72bb' content='87.168.202.96'
+2026-02-20 21:24:49,631 - INFO - Record 14: name='fmd.mcjj.de' type='A' id='e578694b50cbfa970b8b90fdeb5ed576' content='87.168.202.96'
+2026-02-20 21:24:49,631 - INFO - Record 15: name='home.mcjj.de' type='A' id='3081e6ee580c564b8719e2f62de9afb7' content='87.168.202.96'
+2026-02-20 21:24:49,631 - INFO - Record 16: name='ia.mcjj.de' type='A' id='a2703bc850172859b7fed4d35e74bbd5' content='87.168.202.96'
+2026-02-20 21:24:49,631 - INFO - Record 17: name='lam.mcjj.de' type='A' id='716e481d291ae83cf6e9c3533b8f4922' content='87.168.202.96'
+2026-02-20 21:24:49,631 - INFO - Record 18: name='ldap.mcjj.de' type='A' id='cd031622dfe783973ce19dfbad2013c7' content='87.168.202.96'
+2026-02-20 21:24:49,631 - INFO - Record 19: name='led.mcjj.de' type='A' id='e0da494075a31cf3273324cfaff76b4d' content='87.168.202.96'
+2026-02-20 21:24:49,631 - INFO - Record 20: name='mail.mcjj.de' type='A' id='9b82410dcb56eba6dbc3c607163ad713' content='87.168.202.96'
+2026-02-20 21:24:49,631 - INFO - Record 21: name='manage.mcjj.de' type='A' id='be0cd6373add959053603827c7b46332' content='87.168.202.96'
+2026-02-20 21:24:49,631 - INFO - Record 22: name='map.mcjj.de' type='A' id='320ca23a520f45ae163e0b0fc0773f42' content='87.168.202.96'
+2026-02-20 21:24:49,631 - INFO - Record 23: name='mcjj.de' type='A' id='8860de1df6970714a0eac1e62e7a179c' content='87.168.202.96'
+2026-02-20 21:24:49,631 - INFO - Record 24: name='media.mcjj.de' type='A' id='3f57f59e6aac35543d12527213466f1d' content='87.168.202.96'
+2026-02-20 21:24:49,631 - INFO - Record 25: name='musik.mcjj.de' type='A' id='d7f1b7e2ca6a243c275862dcc99876cc' content='87.168.202.96'
+2026-02-20 21:24:49,631 - INFO - Record 26: name='node.mcjj.de' type='A' id='0ec396a6d8b36c314f234b56908ec7d0' content='87.168.202.96'
+2026-02-20 21:24:49,631 - INFO - Record 27: name='pack.mcjj.de' type='A' id='3eb65c01ed544ce522f2d5d0623f39a7' content='87.168.202.96'
+2026-02-20 21:24:49,631 - INFO - Record 28: name='panel.mcjj.de' type='A' id='3619ec0866d417714ae7fcb51c8c1c27' content='87.168.202.96'
+2026-02-20 21:24:49,632 - INFO - Record 29: name='pdf.mcjj.de' type='A' id='b96ca1469277b4a55e3707e6cd5c56e4' content='87.168.202.96'
+2026-02-20 21:24:49,632 - INFO - Record 30: name='plan.mcjj.de' type='A' id='fa2e0077d5ab9668a3217672bbef9173' content='87.168.202.96'
+2026-02-20 21:24:49,632 - INFO - Record 31: name='pma.mcjj.de' type='A' id='8059edf6a07b3221db13fb557c362951' content='87.168.202.96'
+2026-02-20 21:24:49,632 - INFO - Record 32: name='ring.mcjj.de' type='A' id='6c3f59e45db628c3cdbcc8f179481fdd' content='87.168.202.96'
+2026-02-20 21:24:49,632 - INFO - Record 33: name='safe.mcjj.de' type='A' id='3ff2ea873773113b9c8afcbea68abf58' content='87.168.202.96'
+2026-02-20 21:24:49,632 - INFO - Record 34: name='store.mcjj.de' type='A' id='60665f850afeeb8dcf31addfab45aabc' content='87.168.202.96'
+2026-02-20 21:24:49,632 - INFO - Record 35: name='talk.mcjj.de' type='A' id='f9a7f325fbef82d2263e2d0f9f773ff1' content='87.168.202.96'
+2026-02-20 21:24:49,632 - INFO - Record 36: name='tickets.mcjj.de' type='A' id='cf8b448e77f5f1e6b3ce5970cd04da85' content='87.168.202.96'
+2026-02-20 21:24:49,632 - INFO - Record 37: name='vpn.mcjj.de' type='A' id='8846e0a248cac97ba2d22aaf50e6da01' content='87.168.202.96'
+2026-02-20 21:24:49,632 - INFO - Record 38: name='web.mcjj.de' type='A' id='e069ca750fc0e19f3acd9f80853a8ba2' content='87.168.202.96'
+2026-02-20 21:24:49,632 - INFO - Record 39: name='wiki.mcjj.de' type='A' id='39f7b6d7217c48570e3a082e83af7e33' content='87.168.202.96'
+2026-02-20 21:24:49,632 - INFO - Record 40: name='www.fmd.mcjj.de' type='A' id='41fd941b45a458dcc32791ab68bace4d' content='87.168.202.96'
+2026-02-20 21:24:49,632 - INFO - Record 41: name='www.mcjj.de' type='A' id='7df1b6c840743ad3f474a456b7bbbb95' content='87.168.202.96'
+2026-02-20 21:24:49,632 - INFO - Record 42: name='www.pma.mcjj.de' type='A' id='49436ddff904f111058779b199f7169f' content='87.168.202.96'
+2026-02-20 21:24:49,632 - INFO - Record 43: name='countdown.mcjj.de' type='AAAA' id='1bf50f452fb1cf5d755d32bdbcf5a2dd' content='100::'
+2026-02-20 21:24:49,632 - INFO - Record 44: name='cryption.mcjj.de' type='AAAA' id='05511470bffb2a09add4a211d6ac770a' content='100::'
+2026-02-20 21:24:49,636 - INFO - Alte Web-Sessions bereinigt
+2026-02-20 21:24:53,102 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.178.40:5000
+2026-02-20 21:24:53,102 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-20 21:24:59,539 - INFO - 192.168.178.40 - - [20/Feb/2026 21:24:59] "[33mGET / HTTP/1.1[0m" 404 -
+2026-02-20 21:25:00,178 - INFO - 192.168.178.40 - - [20/Feb/2026 21:25:00] "[33mGET / HTTP/1.1[0m" 404 -
+2026-02-20 21:25:00,536 - INFO - 192.168.178.40 - - [20/Feb/2026 21:25:00] "[33mGET / HTTP/1.1[0m" 404 -
+2026-02-20 21:26:23,782 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2026-02-20 21:26:23,787 - INFO - MariaDB Verbindung hergestellt
+2026-02-20 21:26:23,788 - INFO - Datenbank-Tabellen initialisiert
+2026-02-20 21:26:23,788 - INFO - Starting DNS Bot with MySQL Database and Web Control Panel...
+2026-02-20 21:26:23,789 - WARNING - Privileged message content intent is missing, commands may not work as expected.
+2026-02-20 21:26:23,789 - INFO - logging in using static token
+2026-02-20 21:26:24,558 - INFO - Slash-Commands synchronisiert
+2026-02-20 21:26:25,060 - INFO - Shard ID None has connected to Gateway (Session ID: 9398eeb048b21a7b5f1119e9952449b1).
+2026-02-20 21:26:27,091 - INFO - Bot online als DDNS#4771
+2026-02-20 21:26:28,364 - INFO - UPnP Port-Status: {'success': [], 'error': ['TCP 5000: Action not authorized', 'TCP 80: Action not authorized', 'TCP 443: Action not authorized']}
+2026-02-20 21:26:29,137 - ERROR - IP-Abfrage Fehler: HTTPSConnectionPool(host='api.ipify.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002A81127E850>: Failed to resolve 'api.ipify.org' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:26:29,237 - INFO - Fallback IP: 87.168.202.96
+2026-02-20 21:26:29,239 - ERROR - IP-Abfrage Fehler: HTTPSConnectionPool(host='api64.ipify.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002A81127EC10>: Failed to resolve 'api64.ipify.org' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:26:29,358 - ERROR - Fallback IP-Abfrage Fehler: 404 Client Error: Not Found for url: https://ifconfig.co/ipv6
+2026-02-20 21:26:29,360 - INFO - Record 1: name='admin.mcjj.de' type='A' id='d4d798fb76690086b0db3099b6485cfc' content='87.168.202.96'
+2026-02-20 21:26:29,360 - INFO - Record 2: name='ban.mcjj.de' type='A' id='f6e4a3b118b190d14cb614e9fb6c3283' content='87.168.202.96'
+2026-02-20 21:26:29,360 - INFO - Record 3: name='book.mcjj.de' type='A' id='4fa2c13ec9a631e3e7cc471cbb879573' content='87.168.202.96'
+2026-02-20 21:26:29,360 - INFO - Record 4: name='cloud.mcjj.de' type='A' id='0aa6f71f79c5a099ea5cf68d7887e8ed' content='87.168.202.96'
+2026-02-20 21:26:29,360 - INFO - Record 5: name='db.mcjj.de' type='A' id='169bdef56cf1bc67dcef0c8980618270' content='87.168.202.96'
+2026-02-20 21:26:29,360 - INFO - Record 6: name='dc-lib.mcjj.de' type='A' id='e4c909a1d34567371b1a78b056a40463' content='87.168.202.96'
+2026-02-20 21:26:29,361 - INFO - Record 7: name='dc-manage.mcjj.de' type='A' id='a37f6f8b0f87c8f91e578bdf4a3c1023' content='87.168.202.96'
+2026-02-20 21:26:29,361 - INFO - Record 8: name='dc.mcjj.de' type='A' id='f5ea5deaf6d8884ccd4433ab2f2524a4' content='87.168.202.96'
+2026-02-20 21:26:29,361 - INFO - Record 9: name='ddns.mcjj.de' type='A' id='8077fa4a44cb25d4e430b1296ea73658' content='87.168.202.96'
+2026-02-20 21:26:29,361 - INFO - Record 10: name='discord.mcjj.de' type='A' id='daa89dc342c4f7a47d4a9f9526f6d427' content='87.168.202.96'
+2026-02-20 21:26:29,361 - INFO - Record 11: name='dns-manage.mcjj.de' type='A' id='c01457f5a315f327e18f0d8632012f29' content='87.168.202.96'
+2026-02-20 21:26:29,361 - INFO - Record 12: name='dns.mcjj.de' type='A' id='4d778a1ae723bd2daf561b2201e7a110' content='87.168.202.96'
+2026-02-20 21:26:29,361 - INFO - Record 13: name='event-manage.mcjj.de' type='A' id='5b98f68852c15cc3c4fd377ffaec72bb' content='87.168.202.96'
+2026-02-20 21:26:29,361 - INFO - Record 14: name='fmd.mcjj.de' type='A' id='e578694b50cbfa970b8b90fdeb5ed576' content='87.168.202.96'
+2026-02-20 21:26:29,361 - INFO - Record 15: name='home.mcjj.de' type='A' id='3081e6ee580c564b8719e2f62de9afb7' content='87.168.202.96'
+2026-02-20 21:26:29,361 - INFO - Record 16: name='ia.mcjj.de' type='A' id='a2703bc850172859b7fed4d35e74bbd5' content='87.168.202.96'
+2026-02-20 21:26:29,361 - INFO - Record 17: name='lam.mcjj.de' type='A' id='716e481d291ae83cf6e9c3533b8f4922' content='87.168.202.96'
+2026-02-20 21:26:29,361 - INFO - Record 18: name='ldap.mcjj.de' type='A' id='cd031622dfe783973ce19dfbad2013c7' content='87.168.202.96'
+2026-02-20 21:26:29,361 - INFO - Record 19: name='led.mcjj.de' type='A' id='e0da494075a31cf3273324cfaff76b4d' content='87.168.202.96'
+2026-02-20 21:26:29,361 - INFO - Record 20: name='mail.mcjj.de' type='A' id='9b82410dcb56eba6dbc3c607163ad713' content='87.168.202.96'
+2026-02-20 21:26:29,362 - INFO - Record 21: name='manage.mcjj.de' type='A' id='be0cd6373add959053603827c7b46332' content='87.168.202.96'
+2026-02-20 21:26:29,362 - INFO - Record 22: name='map.mcjj.de' type='A' id='320ca23a520f45ae163e0b0fc0773f42' content='87.168.202.96'
+2026-02-20 21:26:29,362 - INFO - Record 23: name='mcjj.de' type='A' id='8860de1df6970714a0eac1e62e7a179c' content='87.168.202.96'
+2026-02-20 21:26:29,362 - INFO - Record 24: name='media.mcjj.de' type='A' id='3f57f59e6aac35543d12527213466f1d' content='87.168.202.96'
+2026-02-20 21:26:29,362 - INFO - Record 25: name='musik.mcjj.de' type='A' id='d7f1b7e2ca6a243c275862dcc99876cc' content='87.168.202.96'
+2026-02-20 21:26:29,362 - INFO - Record 26: name='node.mcjj.de' type='A' id='0ec396a6d8b36c314f234b56908ec7d0' content='87.168.202.96'
+2026-02-20 21:26:29,362 - INFO - Record 27: name='pack.mcjj.de' type='A' id='3eb65c01ed544ce522f2d5d0623f39a7' content='87.168.202.96'
+2026-02-20 21:26:29,362 - INFO - Record 28: name='panel.mcjj.de' type='A' id='3619ec0866d417714ae7fcb51c8c1c27' content='87.168.202.96'
+2026-02-20 21:26:29,362 - INFO - Record 29: name='pdf.mcjj.de' type='A' id='b96ca1469277b4a55e3707e6cd5c56e4' content='87.168.202.96'
+2026-02-20 21:26:29,362 - INFO - Record 30: name='plan.mcjj.de' type='A' id='fa2e0077d5ab9668a3217672bbef9173' content='87.168.202.96'
+2026-02-20 21:26:29,362 - INFO - Record 31: name='pma.mcjj.de' type='A' id='8059edf6a07b3221db13fb557c362951' content='87.168.202.96'
+2026-02-20 21:26:29,362 - INFO - Record 32: name='ring.mcjj.de' type='A' id='6c3f59e45db628c3cdbcc8f179481fdd' content='87.168.202.96'
+2026-02-20 21:26:29,362 - INFO - Record 33: name='safe.mcjj.de' type='A' id='3ff2ea873773113b9c8afcbea68abf58' content='87.168.202.96'
+2026-02-20 21:26:29,362 - INFO - Record 34: name='store.mcjj.de' type='A' id='60665f850afeeb8dcf31addfab45aabc' content='87.168.202.96'
+2026-02-20 21:26:29,362 - INFO - Record 35: name='talk.mcjj.de' type='A' id='f9a7f325fbef82d2263e2d0f9f773ff1' content='87.168.202.96'
+2026-02-20 21:26:29,362 - INFO - Record 36: name='tickets.mcjj.de' type='A' id='cf8b448e77f5f1e6b3ce5970cd04da85' content='87.168.202.96'
+2026-02-20 21:26:29,362 - INFO - Record 37: name='vpn.mcjj.de' type='A' id='8846e0a248cac97ba2d22aaf50e6da01' content='87.168.202.96'
+2026-02-20 21:26:29,363 - INFO - Record 38: name='web.mcjj.de' type='A' id='e069ca750fc0e19f3acd9f80853a8ba2' content='87.168.202.96'
+2026-02-20 21:26:29,363 - INFO - Record 39: name='wiki.mcjj.de' type='A' id='39f7b6d7217c48570e3a082e83af7e33' content='87.168.202.96'
+2026-02-20 21:26:29,363 - INFO - Record 40: name='www.fmd.mcjj.de' type='A' id='41fd941b45a458dcc32791ab68bace4d' content='87.168.202.96'
+2026-02-20 21:26:29,363 - INFO - Record 41: name='www.mcjj.de' type='A' id='7df1b6c840743ad3f474a456b7bbbb95' content='87.168.202.96'
+2026-02-20 21:26:29,363 - INFO - Record 42: name='www.pma.mcjj.de' type='A' id='49436ddff904f111058779b199f7169f' content='87.168.202.96'
+2026-02-20 21:26:29,363 - INFO - Record 43: name='countdown.mcjj.de' type='AAAA' id='1bf50f452fb1cf5d755d32bdbcf5a2dd' content='100::'
+2026-02-20 21:26:29,363 - INFO - Record 44: name='cryption.mcjj.de' type='AAAA' id='05511470bffb2a09add4a211d6ac770a' content='100::'
+2026-02-20 21:26:29,367 - INFO - Alte Web-Sessions bereinigt
+2026-02-20 21:26:33,306 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.178.40:5000
+2026-02-20 21:26:33,306 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-20 21:26:40,962 - INFO - 192.168.178.40 - - [20/Feb/2026 21:26:40] "GET / HTTP/1.1" 200 -
+2026-02-20 21:26:40,983 - INFO - 192.168.178.40 - - [20/Feb/2026 21:26:40] "[33mGET /api/ports HTTP/1.1[0m" 404 -
+2026-02-20 21:26:41,815 - ERROR - IP-Abfrage Fehler: HTTPSConnectionPool(host='api.ipify.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002A81127EAD0>: Failed to resolve 'api.ipify.org' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:26:41,965 - INFO - Fallback IP: 87.168.202.96
+2026-02-20 21:26:41,967 - ERROR - IP-Abfrage Fehler: HTTPSConnectionPool(host='api64.ipify.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002A81127FD90>: Failed to resolve 'api64.ipify.org' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:26:42,073 - ERROR - Fallback IP-Abfrage Fehler: 404 Client Error: Not Found for url: https://ifconfig.co/ipv6
+2026-02-20 21:26:42,074 - INFO - 192.168.178.40 - - [20/Feb/2026 21:26:42] "GET /api/status HTTP/1.1" 200 -
+2026-02-20 21:31:48,194 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2026-02-20 21:31:48,200 - INFO - MariaDB Verbindung hergestellt
+2026-02-20 21:31:48,200 - INFO - Datenbank-Tabellen initialisiert
+2026-02-20 21:31:48,200 - INFO - Starting DNS Bot with MySQL Database and Web Control Panel...
+2026-02-20 21:31:48,201 - WARNING - Privileged message content intent is missing, commands may not work as expected.
+2026-02-20 21:31:48,201 - INFO - logging in using static token
+2026-02-20 21:31:49,278 - INFO - Slash-Commands synchronisiert
+2026-02-20 21:31:50,071 - INFO - Shard ID None has connected to Gateway (Session ID: c46405a811f7aa521f83ffed02e10e76).
+2026-02-20 21:31:52,102 - INFO - Bot online als DDNS#4771
+2026-02-20 21:31:53,307 - INFO - UPnP Port-Status: {'success': [], 'error': ['TCP 5000: Action not authorized', 'TCP 80: Action not authorized', 'TCP 443: Action not authorized']}
+2026-02-20 21:31:54,208 - WARNING - Dienst https://api.ipify.org fehlgeschlagen: HTTPSConnectionPool(host='api.ipify.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000204EC93E850>: Failed to resolve 'api.ipify.org' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:31:54,309 - INFO - IP gefunden (https://4.icanhazip.com): 87.168.202.96
+2026-02-20 21:31:54,311 - WARNING - Dienst https://api64.ipify.org fehlgeschlagen: HTTPSConnectionPool(host='api64.ipify.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000204EC93DA90>: Failed to resolve 'api64.ipify.org' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:31:54,366 - WARNING - Dienst https://6.icanhazip.com fehlgeschlagen: HTTPSConnectionPool(host='6.icanhazip.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000204EC93EFD0>: Failed to resolve '6.icanhazip.com' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:31:54,368 - WARNING - Dienst https://v6.ident.me fehlgeschlagen: HTTPSConnectionPool(host='v6.ident.me', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000204EC93F390>: Failed to resolve 'v6.ident.me' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:31:54,420 - WARNING - Dienst https://ipv6.seeip.org fehlgeschlagen: HTTPSConnectionPool(host='ipv6.seeip.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000204EC93F750>: Failed to resolve 'ipv6.seeip.org' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:31:54,420 - ERROR - Alle IP-Dienste sind fehlgeschlagen!
+2026-02-20 21:31:54,421 - INFO - Record 1: name='admin.mcjj.de' type='A' id='d4d798fb76690086b0db3099b6485cfc' content='87.168.202.96'
+2026-02-20 21:31:54,421 - INFO - Record 2: name='ban.mcjj.de' type='A' id='f6e4a3b118b190d14cb614e9fb6c3283' content='87.168.202.96'
+2026-02-20 21:31:54,422 - INFO - Record 3: name='book.mcjj.de' type='A' id='4fa2c13ec9a631e3e7cc471cbb879573' content='87.168.202.96'
+2026-02-20 21:31:54,422 - INFO - Record 4: name='cloud.mcjj.de' type='A' id='0aa6f71f79c5a099ea5cf68d7887e8ed' content='87.168.202.96'
+2026-02-20 21:31:54,422 - INFO - Record 5: name='db.mcjj.de' type='A' id='169bdef56cf1bc67dcef0c8980618270' content='87.168.202.96'
+2026-02-20 21:31:54,422 - INFO - Record 6: name='dc-lib.mcjj.de' type='A' id='e4c909a1d34567371b1a78b056a40463' content='87.168.202.96'
+2026-02-20 21:31:54,422 - INFO - Record 7: name='dc-manage.mcjj.de' type='A' id='a37f6f8b0f87c8f91e578bdf4a3c1023' content='87.168.202.96'
+2026-02-20 21:31:54,422 - INFO - Record 8: name='dc.mcjj.de' type='A' id='f5ea5deaf6d8884ccd4433ab2f2524a4' content='87.168.202.96'
+2026-02-20 21:31:54,422 - INFO - Record 9: name='ddns.mcjj.de' type='A' id='8077fa4a44cb25d4e430b1296ea73658' content='87.168.202.96'
+2026-02-20 21:31:54,422 - INFO - Record 10: name='discord.mcjj.de' type='A' id='daa89dc342c4f7a47d4a9f9526f6d427' content='87.168.202.96'
+2026-02-20 21:31:54,422 - INFO - Record 11: name='dns-manage.mcjj.de' type='A' id='c01457f5a315f327e18f0d8632012f29' content='87.168.202.96'
+2026-02-20 21:31:54,422 - INFO - Record 12: name='dns.mcjj.de' type='A' id='4d778a1ae723bd2daf561b2201e7a110' content='87.168.202.96'
+2026-02-20 21:31:54,422 - INFO - Record 13: name='event-manage.mcjj.de' type='A' id='5b98f68852c15cc3c4fd377ffaec72bb' content='87.168.202.96'
+2026-02-20 21:31:54,422 - INFO - Record 14: name='fmd.mcjj.de' type='A' id='e578694b50cbfa970b8b90fdeb5ed576' content='87.168.202.96'
+2026-02-20 21:31:54,422 - INFO - Record 15: name='home.mcjj.de' type='A' id='3081e6ee580c564b8719e2f62de9afb7' content='87.168.202.96'
+2026-02-20 21:31:54,422 - INFO - Record 16: name='ia.mcjj.de' type='A' id='a2703bc850172859b7fed4d35e74bbd5' content='87.168.202.96'
+2026-02-20 21:31:54,423 - INFO - Record 17: name='lam.mcjj.de' type='A' id='716e481d291ae83cf6e9c3533b8f4922' content='87.168.202.96'
+2026-02-20 21:31:54,423 - INFO - Record 18: name='ldap.mcjj.de' type='A' id='cd031622dfe783973ce19dfbad2013c7' content='87.168.202.96'
+2026-02-20 21:31:54,423 - INFO - Record 19: name='led.mcjj.de' type='A' id='e0da494075a31cf3273324cfaff76b4d' content='87.168.202.96'
+2026-02-20 21:31:54,423 - INFO - Record 20: name='mail.mcjj.de' type='A' id='9b82410dcb56eba6dbc3c607163ad713' content='87.168.202.96'
+2026-02-20 21:31:54,423 - INFO - Record 21: name='manage.mcjj.de' type='A' id='be0cd6373add959053603827c7b46332' content='87.168.202.96'
+2026-02-20 21:31:54,423 - INFO - Record 22: name='map.mcjj.de' type='A' id='320ca23a520f45ae163e0b0fc0773f42' content='87.168.202.96'
+2026-02-20 21:31:54,423 - INFO - Record 23: name='mcjj.de' type='A' id='8860de1df6970714a0eac1e62e7a179c' content='87.168.202.96'
+2026-02-20 21:31:54,423 - INFO - Record 24: name='media.mcjj.de' type='A' id='3f57f59e6aac35543d12527213466f1d' content='87.168.202.96'
+2026-02-20 21:31:54,423 - INFO - Record 25: name='musik.mcjj.de' type='A' id='d7f1b7e2ca6a243c275862dcc99876cc' content='87.168.202.96'
+2026-02-20 21:31:54,423 - INFO - Record 26: name='node.mcjj.de' type='A' id='0ec396a6d8b36c314f234b56908ec7d0' content='87.168.202.96'
+2026-02-20 21:31:54,423 - INFO - Record 27: name='pack.mcjj.de' type='A' id='3eb65c01ed544ce522f2d5d0623f39a7' content='87.168.202.96'
+2026-02-20 21:31:54,423 - INFO - Record 28: name='panel.mcjj.de' type='A' id='3619ec0866d417714ae7fcb51c8c1c27' content='87.168.202.96'
+2026-02-20 21:31:54,423 - INFO - Record 29: name='pdf.mcjj.de' type='A' id='b96ca1469277b4a55e3707e6cd5c56e4' content='87.168.202.96'
+2026-02-20 21:31:54,423 - INFO - Record 30: name='plan.mcjj.de' type='A' id='fa2e0077d5ab9668a3217672bbef9173' content='87.168.202.96'
+2026-02-20 21:31:54,424 - INFO - Record 31: name='pma.mcjj.de' type='A' id='8059edf6a07b3221db13fb557c362951' content='87.168.202.96'
+2026-02-20 21:31:54,424 - INFO - Record 32: name='ring.mcjj.de' type='A' id='6c3f59e45db628c3cdbcc8f179481fdd' content='87.168.202.96'
+2026-02-20 21:31:54,424 - INFO - Record 33: name='safe.mcjj.de' type='A' id='3ff2ea873773113b9c8afcbea68abf58' content='87.168.202.96'
+2026-02-20 21:31:54,424 - INFO - Record 34: name='store.mcjj.de' type='A' id='60665f850afeeb8dcf31addfab45aabc' content='87.168.202.96'
+2026-02-20 21:31:54,424 - INFO - Record 35: name='talk.mcjj.de' type='A' id='f9a7f325fbef82d2263e2d0f9f773ff1' content='87.168.202.96'
+2026-02-20 21:31:54,424 - INFO - Record 36: name='tickets.mcjj.de' type='A' id='cf8b448e77f5f1e6b3ce5970cd04da85' content='87.168.202.96'
+2026-02-20 21:31:54,424 - INFO - Record 37: name='vpn.mcjj.de' type='A' id='8846e0a248cac97ba2d22aaf50e6da01' content='87.168.202.96'
+2026-02-20 21:31:54,424 - INFO - Record 38: name='web.mcjj.de' type='A' id='e069ca750fc0e19f3acd9f80853a8ba2' content='87.168.202.96'
+2026-02-20 21:31:54,424 - INFO - Record 39: name='wiki.mcjj.de' type='A' id='39f7b6d7217c48570e3a082e83af7e33' content='87.168.202.96'
+2026-02-20 21:31:54,424 - INFO - Record 40: name='www.fmd.mcjj.de' type='A' id='41fd941b45a458dcc32791ab68bace4d' content='87.168.202.96'
+2026-02-20 21:31:54,424 - INFO - Record 41: name='www.mcjj.de' type='A' id='7df1b6c840743ad3f474a456b7bbbb95' content='87.168.202.96'
+2026-02-20 21:31:54,424 - INFO - Record 42: name='www.pma.mcjj.de' type='A' id='49436ddff904f111058779b199f7169f' content='87.168.202.96'
+2026-02-20 21:31:54,424 - INFO - Record 43: name='countdown.mcjj.de' type='AAAA' id='1bf50f452fb1cf5d755d32bdbcf5a2dd' content='100::'
+2026-02-20 21:31:54,424 - INFO - Record 44: name='cryption.mcjj.de' type='AAAA' id='05511470bffb2a09add4a211d6ac770a' content='100::'
+2026-02-20 21:31:54,427 - INFO - Alte Web-Sessions bereinigt
+2026-02-20 21:31:58,289 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.178.40:5000
+2026-02-20 21:31:58,289 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-20 21:31:58,546 - INFO - 192.168.178.40 - - [20/Feb/2026 21:31:58] "GET / HTTP/1.1" 200 -
+2026-02-20 21:31:58,799 - INFO - 192.168.178.40 - - [20/Feb/2026 21:31:58] "[33mGET /api/ports HTTP/1.1[0m" 404 -
+2026-02-20 21:31:59,379 - WARNING - Dienst https://api.ipify.org fehlgeschlagen: HTTPSConnectionPool(host='api.ipify.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000204EC93E710>: Failed to resolve 'api.ipify.org' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:31:59,528 - INFO - IP gefunden (https://4.icanhazip.com): 87.168.202.96
+2026-02-20 21:31:59,529 - WARNING - Dienst https://api64.ipify.org fehlgeschlagen: HTTPSConnectionPool(host='api64.ipify.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000204EC93DF90>: Failed to resolve 'api64.ipify.org' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:31:59,546 - WARNING - Dienst https://6.icanhazip.com fehlgeschlagen: HTTPSConnectionPool(host='6.icanhazip.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000204ECAA8410>: Failed to resolve '6.icanhazip.com' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:31:59,547 - WARNING - Dienst https://v6.ident.me fehlgeschlagen: HTTPSConnectionPool(host='v6.ident.me', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000204ECAA87D0>: Failed to resolve 'v6.ident.me' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:31:59,569 - WARNING - Dienst https://ipv6.seeip.org fehlgeschlagen: HTTPSConnectionPool(host='ipv6.seeip.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000204ECAA8B90>: Failed to resolve 'ipv6.seeip.org' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:31:59,569 - ERROR - Alle IP-Dienste sind fehlgeschlagen!
+2026-02-20 21:31:59,570 - INFO - 192.168.178.40 - - [20/Feb/2026 21:31:59] "GET /api/status HTTP/1.1" 200 -
+2026-02-20 21:32:30,132 - WARNING - Dienst https://api.ipify.org fehlgeschlagen: HTTPSConnectionPool(host='api.ipify.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000204EC93F110>: Failed to resolve 'api.ipify.org' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:32:30,340 - INFO - IP gefunden (https://4.icanhazip.com): 87.168.202.96
+2026-02-20 21:32:30,344 - WARNING - Dienst https://api64.ipify.org fehlgeschlagen: HTTPSConnectionPool(host='api64.ipify.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000204ECAA9590>: Failed to resolve 'api64.ipify.org' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:32:30,352 - WARNING - Dienst https://6.icanhazip.com fehlgeschlagen: HTTPSConnectionPool(host='6.icanhazip.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000204ECAA9950>: Failed to resolve '6.icanhazip.com' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:32:30,359 - WARNING - Dienst https://v6.ident.me fehlgeschlagen: HTTPSConnectionPool(host='v6.ident.me', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000204EC93F110>: Failed to resolve 'v6.ident.me' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:32:30,367 - WARNING - Dienst https://ipv6.seeip.org fehlgeschlagen: HTTPSConnectionPool(host='ipv6.seeip.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000204EC93F610>: Failed to resolve 'ipv6.seeip.org' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:32:30,367 - ERROR - Alle IP-Dienste sind fehlgeschlagen!
+2026-02-20 21:32:30,368 - INFO - 192.168.178.40 - - [20/Feb/2026 21:32:30] "GET /api/status HTTP/1.1" 200 -
+2026-02-20 21:33:00,093 - WARNING - Dienst https://api.ipify.org fehlgeschlagen: HTTPSConnectionPool(host='api.ipify.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000204EC93E850>: Failed to resolve 'api.ipify.org' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:33:00,175 - INFO - IP gefunden (https://4.icanhazip.com): 87.168.202.96
+2026-02-20 21:33:00,177 - WARNING - Dienst https://api64.ipify.org fehlgeschlagen: HTTPSConnectionPool(host='api64.ipify.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000204EC93E990>: Failed to resolve 'api64.ipify.org' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:33:00,179 - WARNING - Dienst https://6.icanhazip.com fehlgeschlagen: HTTPSConnectionPool(host='6.icanhazip.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000204EC93E490>: Failed to resolve '6.icanhazip.com' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:33:00,181 - WARNING - Dienst https://v6.ident.me fehlgeschlagen: HTTPSConnectionPool(host='v6.ident.me', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000204EC93E0D0>: Failed to resolve 'v6.ident.me' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:33:00,183 - WARNING - Dienst https://ipv6.seeip.org fehlgeschlagen: HTTPSConnectionPool(host='ipv6.seeip.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000204EC93F4D0>: Failed to resolve 'ipv6.seeip.org' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:33:00,183 - ERROR - Alle IP-Dienste sind fehlgeschlagen!
+2026-02-20 21:33:00,184 - INFO - 192.168.178.40 - - [20/Feb/2026 21:33:00] "GET /api/status HTTP/1.1" 200 -
+2026-02-20 21:33:09,174 - INFO - 192.168.178.40 - - [20/Feb/2026 21:33:09] "GET / HTTP/1.1" 200 -
+2026-02-20 21:33:09,191 - INFO - 192.168.178.40 - - [20/Feb/2026 21:33:09] "[33mGET /api/ports HTTP/1.1[0m" 404 -
+2026-02-20 21:33:09,911 - WARNING - Dienst https://api.ipify.org fehlgeschlagen: HTTPSConnectionPool(host='api.ipify.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000204ECAA9950>: Failed to resolve 'api.ipify.org' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:33:09,979 - INFO - IP gefunden (https://4.icanhazip.com): 87.168.202.96
+2026-02-20 21:33:09,981 - WARNING - Dienst https://api64.ipify.org fehlgeschlagen: HTTPSConnectionPool(host='api64.ipify.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000204ECAA8E10>: Failed to resolve 'api64.ipify.org' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:33:09,985 - WARNING - Dienst https://6.icanhazip.com fehlgeschlagen: HTTPSConnectionPool(host='6.icanhazip.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000204ECAA8CD0>: Failed to resolve '6.icanhazip.com' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:33:09,987 - WARNING - Dienst https://v6.ident.me fehlgeschlagen: HTTPSConnectionPool(host='v6.ident.me', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000204EC93F4D0>: Failed to resolve 'v6.ident.me' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:33:09,989 - WARNING - Dienst https://ipv6.seeip.org fehlgeschlagen: HTTPSConnectionPool(host='ipv6.seeip.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000204EC93E0D0>: Failed to resolve 'ipv6.seeip.org' ([Errno 11004] getaddrinfo failed)"))
+2026-02-20 21:33:09,989 - ERROR - Alle IP-Dienste sind fehlgeschlagen!
+2026-02-20 21:33:09,990 - INFO - 192.168.178.40 - - [20/Feb/2026 21:33:09] "GET /api/status HTTP/1.1" 200 -
+2026-02-20 21:33:19,677 - INFO - 192.168.178.40 - - [20/Feb/2026 21:33:19] "[33mGET /api/ports HTTP/1.1[0m" 404 -
+2026-02-20 21:33:22,837 - INFO - 192.168.178.40 - - [20/Feb/2026 21:33:22] "[33mGET /api/history?limit=50 HTTP/1.1[0m" 404 -
+2026-02-20 21:33:23,653 - INFO - 192.168.178.40 - - [20/Feb/2026 21:33:23] "[33mGET /api/history?limit=50 HTTP/1.1[0m" 404 -
+2026-02-20 21:33:24,157 - INFO - 192.168.178.40 - - [20/Feb/2026 21:33:24] "[33mGET /api/logs?limit=100 HTTP/1.1[0m" 404 -
+2026-02-20 21:33:24,604 - INFO - 192.168.178.40 - - [20/Feb/2026 21:33:24] "[33mGET /api/history?limit=50 HTTP/1.1[0m" 404 -
